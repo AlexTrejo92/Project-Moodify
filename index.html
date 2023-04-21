@@ -1,12 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moodify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+  
+
+  <!--starting page-->
+  <section class="container has-text-centered">
+      <h1 class="title is-size-1">
+        Welcome to Moodify
+      </h1>
+      <p class="subtitle is-size-4">
+        Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?
+      </p>
+      <button class="button is-medium is-responsive is-rounded is-outlined is-primary">
+        Start
+      </button>
+  </section>
+  
+
+  <!-- <nav class="navbar is-primary has-shadow">
+    <div class="navbar-brand">
+      <a class= "navbar-item">
+        <h1 class="page-name is-size-3">Moodify</h1>
+        </a>
+          <a class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+
+    <div class="navbar-menu" id="nav-links">
+    <div class="navbar-end">
+        <a class="navbar-item">
+          About us
+        </a> 
+        <a class="navbar-item">
+          FAQ
+        </a>
+      </div>
+    </div>
+  </nav> -->
+
+  <section class="section">
+  <nav class="level is-mobile">
+    <p class="level-item has-text-centered">
+      <a class="link is-info">About us</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="title is-size-2">Moodify</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link is-info">FAQ</a>
+    </p>
+  </nav>
+  </section>
+
+
+  <!-- user data input bar -->
+  <article class="panel is-primary">
+    <p class="panel-heading">
+      What are you looking for?
+    </p>
+    <div class="panel-block">
+      <p class="control has-icons-left">
+        <input class="input is-primary" type="text" placeholder="Search">
+        <span class="icon is-left">
+          <i class="fas fa-search" aria-hidden="true"></i>
+        </span>
+      </p>
+    </div>
+  </article>
+
+  <section class="section">
+      <div class="columns is-mobile has-text-centered"> 
+          <div class="column is-one-third has-background-primary">
+            playlist area 
+          </div>
+          <div class="column is-one-third is-offset-one-third has-background-primary">
+            moodboard area
+          </div>
+      </div>
+  </section>
+
+  <script src="./assets/js/script.js"></script>
+  </body>
 </html>
