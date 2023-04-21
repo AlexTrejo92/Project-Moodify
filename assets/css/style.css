@@ -1,5 +1,19 @@
-.container.has-text-centered {
+#startPage {
     margin-top: 40vh;
     margin-bottom: 40vh;
+    display: block;
+}
+
+#header {
     display: none;
 }
+
+#searchbar {
+    display: none;
+}
+
+#results {
+    display: none;
+}
+
+
