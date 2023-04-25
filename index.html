@@ -34,11 +34,11 @@
           </p>
           <p class="subtitle is-size-4">
             Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?</p>
-            <button class="button is-medium is-responsive is-rounded is-outlined is-primary">
+            <button class="button is-medium is-responsive is-rounded is-outlined is-link">
               Start
             </button>
           </div>
-  <div class="start-background-pattern dot" id="test"></div>
+        <div class="start-background-pattern dot" id="test"></div>
           <figure class="image">
             <img class="is-one-half" id="#start-background-pattern">
           </figure>
@@ -84,15 +84,14 @@
   </nav>
   </section>
 
-
   <!-- user data input bar -->
-  <article class="panel is-primary" id="searchbar">
+  <article class="panel is-link" id="searchbar">
     <p class="panel-heading">
       What are you looking for?
     </p>
     <div class="panel-block">
       <p class="control has-icons-left">
-        <input class="input is-primary" type="text" placeholder="Search">
+        <input class="input is-link" type="text" placeholder="Search">
         <span class="icon is-left">
           <i class="fas fa-search" aria-hidden="true"></i>
         </span>
@@ -100,12 +99,54 @@
     </div>
   </article>
 
+  <div class="box">
+  <div class="dropdown">
+    <div class="dropdown-trigger">
+      <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+        <span>Click me</span>
+        <span class="icon is-small">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+      <div class="dropdown-content">
+        <a href="#" class="dropdown-item">
+          Overview
+        </a>
+        <a href="#" class="dropdown-item">
+          Modifiers
+        </a>
+        <a href="#" class="dropdown-item">
+          Grid
+        </a>
+        <a href="#" class="dropdown-item">
+          Form
+        </a>
+        <a href="#" class="dropdown-item">
+          Elements
+        </a>
+        <a href="#" class="dropdown-item">
+          Components
+        </a>
+        <a href="#" class="dropdown-item">
+          Layout
+        </a>
+        <hr class="dropdown-divider">
+        <a href="#" class="dropdown-item">
+          More
+        </a>
+      </div>
+    </div>
+   </div>
+  </div>
+  
   <section class="section" id="results">
       <div class="columns is-mobile has-text-centered"> 
-          <div class="column is-one-third has-background-primary">
+          <div class="column is-one-third has-background-info">
             playlist area 
           </div>
-          <div class="column is-one-third is-offset-one-third has-background-primary">
+          <div class="column is-one-third is-offset-one-third has-background-info">
             moodboard area
           </div>
       </div>
