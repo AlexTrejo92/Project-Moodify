@@ -1,7 +1,7 @@
 #startPage {
     margin-top: 40vh;
     margin-bottom: 40vh;
-    display: none;
+    display: block; /*block*/
 }
 
 
@@ -25,15 +25,15 @@
 }
 
 #header {
-    display: inline;
+    display: none; /*inline*/
 }
 
 #searchbar {
-    display: inline;
+    display: none; /*inline*/
 }
 
 #results {
-    display: block;
+    display: none; /*block*/
 }
 
 
