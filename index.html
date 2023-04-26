@@ -1,12 +1,105 @@
+<!-- link repo: https://github.com/AlexTrejo92/Project-Moodify -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moodify Branch Xime</title>
+    <!-- style sheets -->
+
+    <!-- Bulma 1 (ISA) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <!-- Bulma 2 -->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <!-- My style  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    
 </head>
+
 <body>
+    <header>Welcome to Moodify</header>
+
+
+    <div id="selectionBar">
+
+        <!-- dropdown -->
+        <div class="optionsTitle">Language
+         <div class="optionsDiv lans">
+            <div class="lan option" id="en">English</div>
+            <div class="lan option"class="lanOption" id="es">Español</div>
+            <div class="lan option" id="fr">français</div>
+         </div>
+        </div>
+        <!-- dropdown fin -->
+
+        <!-- dropdown -->
+        <div class="optionsTitle">Colors
+         <div class="optionsDiv colors">
+            <!-- <div class="color option" id="All">All (default)</div>   Change ID to match default!!!!! -->
+            <div class="color option" id="grayscale">Grayscale</div>
+            <div class="color option" id="red">Red</div>
+            <div class="color option" id="orange">Orange</div>
+            <div class="color option" id="yellow">Yellow</div>
+            <div class="color option" id="green">Green</div>
+            <div class="color option" id="blue">Blue</div>
+            <div class="color option" id="pink">Pink</div>
+            <div class="color option" id="brown">Brown</div>
+            <div class="color option" id="white">White</div>
+            <div class="color option" id="black">Black</div>
+         </div>
+        </div>
+        <!-- dropdown fin -->
+
+        <!-- dropdown -->
+        <div class="optionsTitle">Category
+         <div class="optionsDiv categories"> <!-- backgrounds, fashion, nature, science, education, feelings, health, people, religion, places, animals, industry, computer, food, sports, transportation, travel, buildings, business, music -->
+            <div class="category option" id="fashion">Fashion</div>
+            <div class="category option" id="nature">Nature</div>
+            <div class="category option" id="science">Science</div>
+            <div class="category option" id="feelings">Feelings</div>
+            <div class="category option" id="people">People</div>
+            <div class="category option" id="places">Places</div>
+            <div class="category option" id="animals">Animals</div>
+            <div class="category option" id="travel">Travel</div>
+            <div class="category option" id="sports">Sports</div>
+         </div>
+        </div>
+        <!-- dropdown fin -->
+      
+        <div>safesearch
+        <input type="checkbox" class="safeSearch" checked></div> 
+
+        <form>
+            <input placeholder="image promt" id="input" />
+            <button id="submit">Boton</button>
+        </form>
+    </div> 
+    <h1>Pixabay</h1>
+    <div class="something">
+        <div class="Spotify">Spotify Playlist!</div>
+        <div class="gallery" id="pixabay">
+            <img class="gallery__img" id="img1"/>
+            <img class="gallery__img" id="img2"/>
+            <img class="gallery__img" id="img3"/>
+            <img class="gallery__img" id="img4"/>
+            <img class="gallery__img" id="img5"/>
+            <img class="gallery__img" id="img6"/>
+            <img class="gallery__img" id="img7"/>
+            <img class="gallery__img" id="img8"/>
+            <img class="gallery__img" id="img9"/>
+            <img class="gallery__img" id="img10"/>
+        </div>
+    </div>
+    <div><h1>Unsplash</h1></div>
+    <div><h1>Pexels</h1></div>
     
 </body>
+<!-- script dropdowns -->
+<!-- <script src="./assets/js/script2.js"></script> -->
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- My script -->
+<script src="./assets/js/script.js"></script>
 </html>

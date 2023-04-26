@@ -1,0 +1,65 @@
+<!-- dropdown from: https://www.tutorialspoint.com/bulma/bulma_components_dropdown.htm -->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <title>Bulma Elements Example</title>
+      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+      <!-- <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script> -->
+   </head>
+   
+   <body>
+      <section class = "section">
+         <div class = "container">
+            <span class = "title">
+               Basic Dropdown
+            </span>
+            <br>
+            <br>
+            
+            <div class = "dropdown">
+               <div class = "dropdown-trigger">
+                  <button class = "button" aria-haspopup = "true" aria-controls = "dropdown-menu">
+                     <span>Countries</span>
+                     <span class = "icon is-small">
+                        <i class = "fa fa-angle-down" aria-hidden="true"></i>
+                     </span>
+                  </button>
+               </div>
+               <div class = "dropdown-menu" id = "dropdown-menu" role = "menu">
+                  <div class = "dropdown-content">
+                     <a href = "#" class = "dropdown-item">India</a>
+                     <a class = "dropdown-item">England</a>
+                     <a href = "#" class = "dropdown-item is-active">Australia</a>
+                     <a href = "#" class = "dropdown-item">Srilanka</a>
+                     <hr class = "dropdown-divider">
+                     <a href = "#" class = "dropdown-item">South Africa</a>
+                  </div>
+               </div>
+            </div>
+            <!-- <script>
+               //DOMContentLoaded - it fires when initial HTML document has been completely loaded
+               document.addEventListener('DOMContentLoaded', function () {
+                  // querySelector - it returns the element within the document that matches the specified selector
+                  var dropdown = document.querySelector('.dropdown');
+                    
+                  //addEventListener - attaches an event handler to the specified element.
+                  dropdown.addEventListener('click', function(event) {
+                    
+                     //event.stopPropagation() - it stops the bubbling of an event to parent elements, by preventing parent event handlers from being executed
+                     event.stopPropagation();
+                      
+                     //classList.toggle - it toggles between adding and removing a class name from an element
+                     dropdown.classList.toggle('is-active');
+                  });
+               });        
+            </script> -->
+         </div>
+         
+      </section>
+      <script src="./assets/js/script2.js"></script>
+   </body>
+   
+</html>
