@@ -1,10 +1,3 @@
-// // mobile navbar menu
-// var burgerIcon = document.querySelector('#burger');
-// var navbarMenu = document.querySelector('#nav-links');
-
-// burgerIcon.addEventListener('click', () => {
-//     navbarMenu.classList.toggle('is-active')
-// })
 
 var menu1 = document.getElementById("dropdown1");
 menu1.addEventListener('click', e=>{

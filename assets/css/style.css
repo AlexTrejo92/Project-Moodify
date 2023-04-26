@@ -1,7 +1,7 @@
 #startPage {
     margin-top: 40vh;
     margin-bottom: 40vh;
-    display: block; /*block*/
+    display: none; /*block*/
 }
 
 
@@ -25,15 +25,33 @@
 }
 
 #header {
-    display: none; /*inline*/
+    display: inline; /*inline*/
 }
 
 #searchbar {
-    display: none; /*inline*/
+    display: inline; /*inline*/
 }
 
 #results {
-    display: none; /*block*/
+    display: block; /*block*/
 }
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  } 
+
+.card {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  height: 10rem;
+}
+
+@media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
 
 
