@@ -28,3 +28,9 @@ startBtn.addEventListener('click', () => {
     var dropdowns = document.getElementById("dropdowns");
     dropdowns.style.display ='inline';
 });
+
+var searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener('click', () => {
+    var results = document.getElementById("results");
+    results.style.display = 'block';
+});
