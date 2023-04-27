@@ -1,19 +1,23 @@
 #startPage {
     margin-top: 40vh;
     margin-bottom: 40vh;
-    display: none; /*block*/
+    display: block; /*block*/
 }
 
 #header {
-    display: inline; /*inline*/
+    display: none; /*inline*/
 }
 
 #searchbar {
-    display: inline; /*inline*/
+    display: none; /*inline*/
 }
 
 #results {
-    display: block; /*block*/
+    display: none; /*block*/
+}
+
+#dropdowns {
+    display: none; /*inline*/
 }
 
 .cards {

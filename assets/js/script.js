@@ -16,3 +16,15 @@ menu3.addEventListener('click', e=>{
     e.stopPropagation()
     menu3.classList.toggle('is-active')
 })
+
+var startBtn = document.getElementById("startBtn");
+startBtn.addEventListener('click', () => {
+    var startPage = document.getElementById("startPage");
+    startPage.style.display= 'none';
+    var header = document.getElementById("header");
+    header.style.display='inline';
+    var searchbar = document.getElementById("searchbar");
+    searchbar.style.display='inline';
+    var dropdowns = document.getElementById("dropdowns");
+    dropdowns.style.display ='inline';
+});
