@@ -1,105 +1,300 @@
-<!-- link repo: https://github.com/AlexTrejo92/Project-Moodify -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moodify Branch Xime</title>
-    <!-- style sheets -->
-
-    <!-- Bulma 1 (ISA) -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moodify</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <!-- Bulma 2 -->
-    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-    <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-    <!-- My style  -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+  
+
+  <!-- starting page
+  <section class="container has-text-centered" id="startPage">
+      <h1 class="title is-size-1">
+        Welcome to Moodify
+      </h1>
+      <p class="subtitle is-size-4">
+        Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?
+      </p>
+      <button class="button is-medium is-responsive is-rounded is-outlined is-primary">
+        Start
+      </button>
+      <div class= "container" id="start-background-pattern">
+      </div>
+    </section> -->
+
+
+    <section class="hero is-fullheight" id="startPage">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title is-size-1">
+            Welcome to Moodify
+          </p>
+          <p class="subtitle is-size-4">
+            Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?</p>
+            <button class="button is-medium is-responsive is-rounded is-outlined is-link">
+              Start
+            </button>
+          </div>
+        <div class="start-background-pattern dot" id="test"></div>
+          <figure class="image">
+            <img class="is-one-half" id="#start-background-pattern">
+          </figure>
+       </div>
+            <div class="container">
+              <div class="columns is-mobile has-text-centered"> 
+                <div class="column is-one-third is-offset-one-third">  
+                <progress class="progress is-normal is-link" max="100">30%</progress>
+                    </div>
+              </div>
+            </div>
+    </section>
+
     
-</head>
+  
 
-<body>
-    <header>Welcome to Moodify</header>
-
-
-    <div id="selectionBar">
-
-        <!-- dropdown -->
-        <div class="optionsTitle">Language
-         <div class="optionsDiv lans">
-            <div class="lan option" id="en">English</div>
-            <div class="lan option"class="lanOption" id="es">Español</div>
-            <div class="lan option" id="fr">français</div>
-         </div>
+  <!-- <nav class="navbar is-primary has-shadow">
+    <div class="navbar-brand">
+      <a class= "navbar-item">
+        <h1 class="page-name is-size-3">Moodify</h1>
+        </a>
+          <a class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
         </div>
-        <!-- dropdown fin -->
-
-        <!-- dropdown -->
-        <div class="optionsTitle">Colors
-         <div class="optionsDiv colors">
-            <!-- <div class="color option" id="All">All (default)</div>   Change ID to match default!!!!! -->
-            <div class="color option" id="grayscale">Grayscale</div>
-            <div class="color option" id="red">Red</div>
-            <div class="color option" id="orange">Orange</div>
-            <div class="color option" id="yellow">Yellow</div>
-            <div class="color option" id="green">Green</div>
-            <div class="color option" id="blue">Blue</div>
-            <div class="color option" id="pink">Pink</div>
-            <div class="color option" id="brown">Brown</div>
-            <div class="color option" id="white">White</div>
-            <div class="color option" id="black">Black</div>
-         </div>
-        </div>
-        <!-- dropdown fin -->
-
-        <!-- dropdown -->
-        <div class="optionsTitle">Category
-         <div class="optionsDiv categories"> <!-- backgrounds, fashion, nature, science, education, feelings, health, people, religion, places, animals, industry, computer, food, sports, transportation, travel, buildings, business, music -->
-            <div class="category option" id="fashion">Fashion</div>
-            <div class="category option" id="nature">Nature</div>
-            <div class="category option" id="science">Science</div>
-            <div class="category option" id="feelings">Feelings</div>
-            <div class="category option" id="people">People</div>
-            <div class="category option" id="places">Places</div>
-            <div class="category option" id="animals">Animals</div>
-            <div class="category option" id="travel">Travel</div>
-            <div class="category option" id="sports">Sports</div>
-         </div>
-        </div>
-        <!-- dropdown fin -->
-      
-        <div>safesearch
-        <input type="checkbox" class="safeSearch" checked></div> 
-
-        <form>
-            <input placeholder="image promt" id="input" />
-            <button id="submit">Boton</button>
-        </form>
-    </div> 
-    <h1>Pixabay</h1>
-    <div class="something">
-        <div class="Spotify">Spotify Playlist!</div>
-        <div class="gallery" id="pixabay">
-            <img class="gallery__img" id="img1"/>
-            <img class="gallery__img" id="img2"/>
-            <img class="gallery__img" id="img3"/>
-            <img class="gallery__img" id="img4"/>
-            <img class="gallery__img" id="img5"/>
-            <img class="gallery__img" id="img6"/>
-            <img class="gallery__img" id="img7"/>
-            <img class="gallery__img" id="img8"/>
-            <img class="gallery__img" id="img9"/>
-            <img class="gallery__img" id="img10"/>
-        </div>
+    <div class="navbar-menu" id="nav-links">
+    <div class="navbar-end">
+        <a class="navbar-item">
+          About us
+        </a> 
+        <a class="navbar-item">
+          FAQ
+        </a>
+      </div>
     </div>
-    <div><h1>Unsplash</h1></div>
-    <div><h1>Pexels</h1></div>
+  </nav> -->
+
+  <section class="section" id="header">
+  <nav class="level is-mobile">
+    <p class="level-item has-text-centered">
+      <a class="link is-info">About us</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="title is-size-2">Moodify</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link is-info">FAQ</a>
+    </p>
+  </nav>
+  </section>
+
+  <!-- user data input bar -->
+  <article class="panel is-link" id="searchbar">
+    <p class="panel-heading">
+      What are you looking for?
+    </p>
+    <div class="panel-block">
+      <p class="control has-icons-left">
+        <input class="input is-link" type="text" placeholder="Search" id="input">
+        <span class="icon is-left">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>        
+        </span>
+      </p>
+      <button class="button" id="submit">Boton</button>
+    </div>
     
-</body>
-<!-- script dropdowns -->
-<!-- <script src="./assets/js/script2.js"></script> -->
-<!-- JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- My script -->
-<script src="./assets/js/script.js"></script>
+  </article>
+
+  <div class="box">
+    <div class="boxx columns is-mobile has-text-centered"> 
+      <!--START OF FIRST column with dropdown-->
+      <div> 
+
+          <div class="dropdown has-text-left" id="dropdown1">
+
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span>Language</span>
+                <span class="icon is-small">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+
+            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+              <div class="dropdown-content">
+                <a class="lan dropdown-item" id="en">English (Default)</a>
+                <hr class="dropdown-divider">
+                <a class="lan dropdown-item"class="lanOption" id="es">Español</a>
+                <a class="lan dropdown-item" id="fr">Français</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      <!--END OF FIRST column with dropdown-->
+
+      <!--START OF SECOND column with dropdown-->
+      <div>  
+
+        <div class="dropdown has-text-left" id="dropdown2">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+              <span>Color</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+
+          <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+            <div class="dropdown-content">
+
+              <a class="color dropdown-item" id="grayscale">Grayscale</a>
+              <a class="color dropdown-item" id="red">Red</a>
+              <a class="color dropdown-item" id="orange">Orange</a>
+              <a class="color dropdown-item" id="yellow">Yellow</a>
+              <a class="color dropdown-item" id="green">Green</a>
+              <a class="color dropdown-item" id="blue">Blue</a>
+              <a class="color dropdown-item" id="pink">Pink</a>
+              <a class="color dropdown-item" id="brown">Brown</a>
+              <a class="color dropdown-item" id="white">White</a>
+              <a class="color dropdown-item" id="black">Black</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END OF SECOND column with dropdown-->
+
+      <!--START OF THIRD column with dropdown-->
+      <div>  
+      <div class="dropdown has-text-left" id="dropdown3">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+            <span>Category</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+
+          <div class="dropdown-content">
+            
+            <a class="category dropdown-item" id="fashion">Fashion</a>
+            <a class="category dropdown-item" id="nature">Nature</a>
+            <a class="category dropdown-item" id="science">Science</a>
+            <a class="category dropdown-item" id="feelings">Feelings</a>
+            <a class="category dropdown-item" id="people">People</a>
+            <a class="category dropdown-item" id="places">Places</a>
+            <a class="category dropdown-item" id="animals">Animals</a>
+            <a class="category dropdown-item" id="travel">Travel</a>
+            <a class="category dropdown-item" id="sports">Sports</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF THIRD column with dropdown-->
+
+    <div>safesearch
+      <input type="checkbox" class="safeSearch" checked></div> 
+    </div>
+  </div>
+  
+  <section class="section" id="results">
+      <div class="columns is-mobile has-text-centered"> 
+
+
+          <!--PLAYLIST AREA START-->
+          <div class="column is-one-third">
+            <!--song box start-->
+            <article class="message is-link">
+              <div class="message-header">
+                <p>song - artist</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              </article>
+            <!--song box end-->
+               <!--song box start-->
+               <article class="message is-link">
+                <div class="message-header">
+                  <p>song - artist</p>
+                  <button class="delete" aria-label="delete"></button>
+                </div>
+                </article>
+              <!--song box end-->
+                 <!--song box start-->
+            <article class="message is-link">
+              <div class="message-header">
+                <p>song - artist</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              </article>
+            <!--song box end-->
+               <!--song box start-->
+               <article class="message is-link">
+                <div class="message-header">
+                  <p>song - artist</p>
+                  <button class="delete" aria-label="delete"></button>
+                </div>
+                </article>
+              <!--song box end-->
+                 <!--song box start-->
+            <article class="message is-link">
+              <div class="message-header">
+                <p>song - artist</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              </article>
+            <!--song box end-->
+               <!--song box start-->
+               <article class="message is-link">
+                <div class="message-header">
+                  <p>song - artist</p>
+                  <button class="delete" aria-label="delete"></button>
+                </div>
+                </article>
+              <!--song box end-->
+                 <!--song box start-->
+            <article class="message is-link">
+              <div class="message-header">
+                <p>song - artist</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              </article>
+            <!--song box end-->
+          </div>
+
+          <!--MOODBOARD AREA START------------------------------------------------------>
+          <div class="moodboard">
+              <h2 class="subtitle is-size-4" >Your moodboard</h2>
+              <p class="messages"></p>
+              <div class="gallery" id="pixabay">
+                  <img class="gallery__img img1" id="0"/>
+                  <img class="gallery__img img2" id="1"/>
+                  <img class="gallery__img img3" id="2"/>
+                  <img class="gallery__img img4" id="3"/>
+                  <img class="gallery__img img5" id="4"/>
+                  <img class="gallery__img img6" id="5"/>
+                  <img class="gallery__img img7" id="6"/>
+                  <img class="gallery__img img8" id="7"/>
+                  <img class="gallery__img img9" id="8"/>
+                  <img class="gallery__img img10" id="9"/>
+              </div>        
+          </div>
+        <!--MOODBOARD AREA END--------------------------------------------------->
+
+
+      </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+  </body>
 </html>
