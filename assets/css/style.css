@@ -1,7 +1,23 @@
 #startPage {
-    margin-top: 30vh;
-    margin-bottom: 40vh;
     display: block; /*block*/
+    background-image: url(/assets/images/moodboard1.jpg);
+}
+
+#startBox {
+    margin: auto;
+    margin-top: 30vh;
+
+}
+
+
+#startPageTitle {
+    color: black;
+}
+
+
+#startBtn {
+    color:grey;
+    
 }
 
 #header {
@@ -19,6 +35,7 @@
 #dropdowns {
     display: none; /*inline*/
 }
+
 
 .cards {
     max-width: 1200px;

@@ -12,26 +12,18 @@
 
     <section class="hero is-fullheight" id="startPage">
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title is-size-1">
+        <div class="box" id="startBox">
+        <div class="container has-text-centered" id="startTextContainer">
+          <p class="title is-size-1" id="startPageTitle">
             Welcome to Moodify
           </p>
-          <p class="subtitle is-size-4">
-            Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?</p>
-            <button class="button is-medium is-responsive is-rounded is-outlined is-link" id="startBtn">
+          <p class="subtitle is-size-4" id="startPageTitle">
+            Ready to create your <strong id="startPageTitle">playlist</strong> and <strong id="startPageTitle">moodboard</strong>?</p>
+            <button class="button is-medium is-responsive is-rounded is-outlined is-black" id="startBtn">
               Start
             </button>
-          </div>
-          <div class="start-background-pattern dot" id="test"></div>
-          <figure class="image">
-          </figure>
-           </div>
-            <div class="container">
-              <div class="columns is-mobile has-text-centered"> 
-                <div class="column is-one-third is-offset-one-third">  
-                <progress class="progress is-normal is-link" max="100">30%</progress>
-                  </div>
-              </div>
+            </div>
+            </div>
             </div>
     </section>
 
@@ -39,25 +31,25 @@
   <section class="section" id="header">
   <nav class="level is-mobile">
     <p class="level-item has-text-centered">
-      <a class="link is-info">About us</a>
+      <a class="link has-text-success-dark">About us</a>
     </p>
     <p class="level-item has-text-centered">
       <a class="title is-size-2">Moodify</a>
     </p>
     <p class="level-item has-text-centered">
-      <a class="link is-info">FAQ</a>
+      <a class="link has-text-success-dark">FAQ</a>
     </p>
   </nav>
   </section>
 
   <!-- user data input bar -->
-  <article class="panel is-link" id="searchbar">
+  <article class="panel is-black" id="searchbar">
     <p class="panel-heading">
       What are you looking for?
     </p>
     <div class="panel-block">
       <p class="control">
-        <input class="input is-link" type="text" placeholder="Search">
+        <input class="input is-black" type="text" placeholder="Search">
       </p>
       <input class="button has-text-centered" type="submit" value="Search" id="searchBtn">
     </div>
@@ -207,7 +199,7 @@
           <!--PLAYLIST AREA START-->
           <div class="column is-two-fifths">
             <!--song box start-->
-            <article class="message is-link">
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
@@ -215,7 +207,7 @@
               </article>
             <!--song box end-->
                <!--song box start-->
-               <article class="message is-link">
+               <article class="message is-grey">
                 <div class="message-header">
                   <p>song - artist</p>
                   <button class="delete" aria-label="delete"></button>
@@ -223,7 +215,7 @@
                 </article>
               <!--song box end-->
                  <!--song box start-->
-            <article class="message is-link">
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
@@ -231,7 +223,7 @@
               </article>
             <!--song box end-->
                <!--song box start-->
-               <article class="message is-link">
+               <article class="message is-grey">
                 <div class="message-header">
                   <p>song - artist</p>
                   <button class="delete" aria-label="delete"></button>
@@ -239,7 +231,7 @@
                 </article>
               <!--song box end-->
                  <!--song box start-->
-            <article class="message is-link">
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
@@ -247,7 +239,7 @@
               </article>
             <!--song box end-->
                <!--song box start-->
-               <article class="message is-link">
+               <article class="message is-grey">
                 <div class="message-header">
                   <p>song - artist</p>
                   <button class="delete" aria-label="delete"></button>
@@ -255,7 +247,7 @@
                 </article>
               <!--song box end-->
                  <!--song box start-->
-            <article class="message is-link">
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
@@ -263,7 +255,7 @@
               </article>
             <!--song box end-->
                 <!--song box start-->
-                <article class="message is-link">
+                <article class="message is-grey">
                   <div class="message-header">
                     <p>song - artist</p>
                     <button class="delete" aria-label="delete"></button>
@@ -274,64 +266,6 @@
 
           <!--MOODBOARD AREA START-->
           <div class="column is-three-fifths">
-            <!-- <div class="tile is-ancestor is-align-content-flex-start">
-              <div class="tile is-vertical is-8">
-                <div class="tile">
-                  <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                      <p class="title">Vertical...</p>
-                      <p class="subtitle">Top tile</p>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                      <p class="title">...tiles</p>
-                      <p class="subtitle">Bottom tile</p>
-                    </article>
-                  </div>
-                  <div class="tile is-parent">
-                    <article class="tile is-child notification is-info">
-                      <p class="title">Middle tile</p>
-                      <p class="subtitle">With an image</p>
-                      <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                      </figure>
-                    </article>
-                  </div>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-danger">
-                    <p class="title">Wide tile</p>
-                    <p class="subtitle">Aligned with the right tile</p>
-                    <div class="content"> -->
-                      <!-- Content -->
-                    <!-- </div>
-                  </article>
-                </div>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child notification is-success">
-                  <div class="content">
-                    <p class="title">Tall tile</p>
-                    <p class="subtitle">With even more content</p>
-                    <div class="content"> -->
-                      <!-- Content -->
-                    <!-- </div>
-                  </div>
-                </article>
-              </div>
-            </div>       -->
-
-            <div class="cards">
-            <div class="card">ONE</div>
-            <div class="card">TWO</div>
-            <div class="card">THREE</div>
-            <div class="card">FOUR</div>
-            <div class="card">FIVE</div>
-            <div class="card">SIX</div>
-            <div class="card">SEVEN</div>
-            <div class="card">EIGHT</div>
-            <div class="card">NINE</div>
-
-            </div>
 
           </div>
         <!--MOODBOARD AREA END-->
