@@ -1,10 +1,3 @@
-// // mobile navbar menu
-// var burgerIcon = document.querySelector('#burger');
-// var navbarMenu = document.querySelector('#nav-links');
-
-// burgerIcon.addEventListener('click', () => {
-//     navbarMenu.classList.toggle('is-active')
-// })
 
 var menu1 = document.getElementById("dropdown1");
 menu1.addEventListener('click', e=>{
@@ -24,11 +17,35 @@ menu3.addEventListener('click', e=>{
     menu3.classList.toggle('is-active')
 })
 
-/* -----------------SCRIPT FOR MOODBOARD  */
-// Image APIs
+var startBtn = document.getElementById("startBtn");
+startBtn.addEventListener('click', () => {
+    var startPage = document.getElementById("startPage");
+    startPage.style.display= 'none';
+    var header = document.getElementById("header");
+    header.style.display='inline';
+    var searchbar = document.getElementById("searchbar");
+    searchbar.style.display='inline';
+    var dropdowns = document.getElementById("dropdowns");
+    // dropdowns.style.display ='inline';
+    dropdowns.style.visibility = "visible";
+    dropdowns.setAttribute("class","dropdownsinit");
+    results.style.visibility = "visible";
+});
+
+// ---------------------------------------------------------COMENTED SEARCHBTN FUNCTIONALITY
+// var searchBtn = document.getElementById("searchBtn");
+// searchBtn.addEventListener('click', () => {
+//     var results = document.getElementById("results");
+//     results.style.display = 'block';
+// });
+
+// ------------------------------------------------------------------XIMENA 
+dropdowns.style.visibility = "hidden";
+results = document.getElementById("results");
+results.style.visibility = "hidden";
+
 var pixabayKey = "35740114-335bc84d305f30b42ed6482fb";
 var queryURL1;
-//
 var lan;
 var color;
 var category;
@@ -72,7 +89,7 @@ checkboxx.addEventListener('click', function() {
 //  SUBMIT BUTTON 
 document.querySelector("#submit").addEventListener("click", function(event){
     event.preventDefault();
-    inputs = document.querySelector("#input").value;
+    inputs = document.querySelector("#inputxim").value;
     pixabayApi(inputs,lan,category,color,check);
   });
   
@@ -108,13 +125,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
       r=10;
     }
     for (n=0; n<r; n++){
-      // var width = ["width: 50%","width: 20%","width: 30%","width: 10%","width: 40%","width: 40%","width: 10%","width: 30%","width: 15%","width: 55%"];
-      // var varname = document.createElement("img");
-      // varname.setAttribute("style",width[n]);
-      // varname.setAttribute("src", myData.hits[n].largeImageURL);
-      // document.querySelector(("#pixabay")).appendChild(varname);
       document.getElementById(n).setAttribute("src", myData.hits[n].largeImageURL);
-      // document.getElementById(n).setAttribute("style","border-radius: 10px;");
     }
     lan="";
     color="";

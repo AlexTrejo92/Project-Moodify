@@ -1,56 +1,39 @@
-/* something 
 #startPage {
-    margin-top: 40vh;
+    margin-top: 30vh;
     margin-bottom: 40vh;
-    display: block;
+    display: block; /*block*/
 }
 
+#header {
+    display: none; /*inline*/
+}
 
-#test .start-background-pattern .dot {
-    height: 30px;
-    width: 30px;
-/* 
-    background-image: radial-gradient(
-        rgba(2255, 255, 255, 0.1) 9%, 
-        transparent 9%
-        ); */
-        /* background-color: blue; */
-        
-    /* background-position: 0%, 0%;
-    background-size: 12vmin, 12vmin; */
+#searchbar {
+    display: none; /*inline*/
+}
 
-    /* position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
-} */
-/*inline*/
-/* #header {
-    display: none; 
-} */
-/*inline*/
-/* #searchbar {
-    display: none; 
-} */
-/*block*/
+/* ----------------------------- Im hidding & displaying the dropdowns and the results from JS with a dropdowns.style.visibility = "hidden";  */
 /* #results {
     display: none; 
 } */
+/* #dropdowns {
+    display: none; 
+} */
 
-
-
-/* -----------------STYLE XIMENA  */
+/* ------------------------------------------XIMENA */
+/* style for dropdowns */
 #submit{
     margin: 1%;
 }
-.boxx{
+
+.dropdownsinit{
     display: flex;
     justify-content: space-between;
     margin: 0 3%;
     padding-bottom: 2%;
 }
 
-/* -----------------STYLE FOR MOODBOARD  */
+/* style for moodboard */
 .messages{
     text-align: left;
 }
