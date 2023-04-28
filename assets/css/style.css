@@ -1,27 +1,7 @@
 #startPage {
-    margin-top: 40vh;
+    margin-top: 30vh;
     margin-bottom: 40vh;
     display: block; /*block*/
-}
-
-
-#test .start-background-pattern .dot {
-    height: 30px;
-    width: 30px;
-/* 
-    background-image: radial-gradient(
-        rgba(2255, 255, 255, 0.1) 9%, 
-        transparent 9%
-        ); */
-        background-color: blue;
-        
-    /* background-position: 0%, 0%;
-    background-size: 12vmin, 12vmin; */
-
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 1;
 }
 
 #header {
@@ -35,5 +15,27 @@
 #results {
     display: none; /*block*/
 }
+
+#dropdowns {
+    display: none; /*inline*/
+}
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  } 
+
+.card {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  height: 10rem;
+}
+
+@media (min-width: 900px) {
+    .cards { grid-template-columns: repeat(3, 1fr); }
+  }
 
 
