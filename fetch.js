@@ -8,7 +8,10 @@ const tokenUrl = 'https://accounts.spotify.com/api/token';
 // variable to hold the token, token will change as the token only last one hour
 let accessToken;
 // this will be replace by the user search
-let artist = 'rock';
+let artist = 'arctic monkeys';
+
+// TODO: This variable should be filled with the user input (dropdown or form);
+let genre = 'pop';
 // Create the fetch request to get the access token
 fetch(tokenUrl, {
   method: 'POST',
@@ -33,7 +36,7 @@ fetch(tokenUrl, {
   });
   function artistSearch() {
     // const apiUrl = `https://api.spotify.com/v1/search?q=${artist}&type=artist`;
-    const apiUrl = `https://api.spotify.com/v1/browse/categories/${artist}/playlists`;
+    const apiUrl = `https://api.spotify.com/v1/browse/categories/${genre}/playlists`;
     fetch(apiUrl, {
       method: 'GET',
       headers: {'Authorization': `Bearer ${accessToken}`}
@@ -48,14 +51,43 @@ fetch(tokenUrl, {
       .then(data => {
         //
         console.log('API response:', data);
+        function printPlaylists() {
+          console.log(data.playlists);
+          console.log(data.playlists.href);
+          console.log(data.playlists.items[0].name);
+          var playlistContainers = document.querySelectorAll('.playlistCont');
+
+          var playlistUrl = data.playlists.items[0].external_urls.spotify;
+          console.log(playlistUrl);
+
+          var link2playlist = document.getElementById('playlistLink');
+          console.log(link2playlist);
+          document.getElementById('playlistLink').setAttribute('href', 'https://open.spotify.com/playlist/37i9dQZF1DXcF6B6QPhFDv');
+
+          for (var i = 0; i < playlistContainers.length; i++) {
+
+            var playlistName = data.playlists.items[i].name;
+            
+            playlistContainers[i].innerText = playlistName;
+            console.log(playlistContainers);
+            console.log(playlistContainers[i]);
+          }
+        }
+        printPlaylists();
       })
       .catch(error => {
         console.error('Error:', error);
       });
   }
+
+ 
+
   const button = document.getElementById('btn');
   button.addEventListener('click', () => {
     artistSearch();
+    
   });
+
+  
 
   // Code to target a different API Endpoint To retreive more data
