@@ -12,6 +12,7 @@
     display: none; /*inline*/
 }
 
+
 /* ----------------------------- Im hidding & displaying the dropdowns and the results from JS with a dropdowns.style.visibility = "hidden";  */
 /* #results {
     display: none; 
@@ -127,3 +128,5 @@
     grid-row-end: 9;
 }
 /* -----------------STYLE FOR MOODBOARD  */
+
+
