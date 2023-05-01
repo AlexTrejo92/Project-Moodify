@@ -14,7 +14,7 @@ let accessToken;
 // TODO: LOCAL STORAGE GET (siempre se hace)
 
 // TODO: This variable should be filled with the user input (dropdown or form);
-let genre = 'rock';
+let genre = 'pop';
 // Create the fetch request to get the access token
 fetch(tokenUrl, {
   method: 'POST',
@@ -38,7 +38,7 @@ fetch(tokenUrl, {
     console.error('Error:', error);
   });
   function artistSearch() {
-    const apiUrl = `https://api.spotify.com/v1/browse/categories/${genre}/playlists`;
+    const apiUrl = `https://api.spotify.com/v1/browse/categories/${genre}/playlists?limit=6`;
     fetch(apiUrl, {
       method: 'GET',
       headers: {'Authorization': `Bearer ${accessToken}`}
@@ -53,16 +53,13 @@ fetch(tokenUrl, {
       .then(data => {
         //
         console.log('API response:', data);
+
         function printPlaylists() {
-          var playlistDatalist = data.playlists.items;
-          var playlistUrl = playlistDatalist[0].external_urls.spotify;
-          
-// For loop that creates and prints the playlist with its info
+          var playlistDatalist = data.playlists.items;         
+          // For loop that creates and prints the playlist with its info
           for (var i = 0; i < data.playlists.items.length; i++) {
             // Creates a container that will hold the playlist name and link to Spotify
             var newPlaylistContainer = document.createElement('div');
-            // Adds the name of the playlist to the created div container
-            newPlaylistContainer.textContent = data.playlists.items[i].name + '  ➡️➡️➡️';
             // add the class playlistContainer to style the divs
             newPlaylistContainer.className = "playlistContainer";
             // Appends the div to the webpage (prints)
@@ -71,41 +68,55 @@ fetch(tokenUrl, {
           // Second for loop to add the URL to the Playlist and the Cover and a button to trigger modal
           for (var i = 0; i < data.playlists.items.length; i++) {
             // Creates a container for the anchor tags and images that will hold the URL to spotify
-            var urlPlaylistContainer = document.createElement('a');
+
             var imgContainer = document.createElement('img');
+            var urlPlaylistContainer = document.createElement('a');
+            var playlistName = document.createElement('p');
             
             // Adds text to the anchor tag
+            playlistName.innerText = '🎧  ' + data.playlists.items[i].name + '  🎧';
             urlPlaylistContainer.innerText = '  Link to playlist on Spotify';
             
             // Adds the href to the playlist and attributes to the img tag so that the cover is displayed          
             urlPlaylistContainer.setAttribute('href', playlistDatalist[i].external_urls.spotify)
             imgContainer.setAttribute('src', playlistDatalist[i].images[0].url)
             imgContainer.setAttribute('alt', 'playlist cover image');
-            imgContainer.className = 'coverImage'
-
+            imgContainer.className = 'coverImage';
+            
 
             // Adds the attribute so the link is opened in a new tab
             urlPlaylistContainer.setAttribute('target', '_blank');
             // Appends the anchor tags and the url to the Images for the covers
-            document.body.children[4].children[i].appendChild(urlPlaylistContainer);
             document.body.children[4].children[i].appendChild(imgContainer);
+            document.body.children[4].children[i].appendChild(playlistName);
+            document.body.children[4].children[i].appendChild(urlPlaylistContainer);
+            
           }
-
+          var getTracksBtn = document.createElement('button');
+          getTracksBtn.innerText = 'Show tracks'
+          getTracksBtn.setAttribute('class', 'getSongsBtn');
+          document.body.children[4].children[0].appendChild(getTracksBtn);
         }
-
-        // TODO: MAKE FOR LOOP TO GET THE PLAYLIST ID
-
         secondSpotifyCall(data);
         printPlaylists();
-        // secondAPICall to retrieve playlist songs and print 10 of them on containers
+        
+        
       })
       .catch(error => {
         console.error('Error:', error);
       });
   }
-// TODO: Make this work!!!!! Print 10 tracks of first playlist result.
+// TODO: Prints 10 tracks of first playlist result to the playlistTracks.html file.
  function secondSpotifyCall(newData){
 var playlistID = newData.playlists.items[0].id;
+          // var getSongsBtn = document.querySelectorAll('getSongsBtn');
+          // getSongsBtn.addEventListener('click', getSongs);
+          
+          // function getSongs() {
+          //   var tracksPage = './playlistTracks.html'
+          //   location.assign(tracksPage);
+          // }
+
   const getItemsUrl = `https://api.spotify.com/v1/playlists/${playlistID}/tracks`;
     fetch(getItemsUrl, {
       method: 'GET',
@@ -120,19 +131,20 @@ var playlistID = newData.playlists.items[0].id;
       })
       .then(dataPlaylistItems => {
         console.log('Second API response:', dataPlaylistItems);
-        // Creates the Ul tag to hold the playlist songs as list items.
+        function getSongs(event){
+          event.preventDefault();
+          console.log('Playlist Songs retrieved');
+                // Creates the Ul tag to hold the playlist songs as list items.
         var ulContainer = document.createElement('ul')
         // add a class so querySelector can be used.
-        ulContainer.classList.add('firstPlaylist')
+        ulContainer.classList.add('playlistSongsContainer')
         // Adds text content to the UL header.
-        ulContainer.innerText = 'List of Songs:'
-        // Appends the UL to the DOM
+        ulContainer.innerHTML = '<strong>Songs on selected Playlist:</strong>' 
+        // Appends the UL container tag to the DOM
         document.getElementById('secondSection').appendChild(ulContainer);
-
-        function printPlaylistItems(){
-          // var i = 0;
-          console.log(document.querySelector('.firstPlaylist'))
-          var firstPlaylistCont = document.querySelector(".firstPlaylist")
+        
+          function printPlaylistItems(){
+          var firstPlaylistCont = document.querySelector(".playlistSongsContainer")
           // for loop to go through first 10 tracks of the playlist
           for (var i = 0; i < 10; i++) {
             // create li items and append them to the UL container
@@ -140,11 +152,34 @@ var playlistID = newData.playlists.items[0].id;
             liContainer.textContent = 'Song: ' + dataPlaylistItems.items[i].track.name + '  by: ' + dataPlaylistItems.items[i].track.artists[0].name;
             firstPlaylistCont.appendChild(liContainer);
           }
+          }
+        printPlaylistItems();
+        // createModal(dataPlaylistItems);
+          }
+        var tracksEventListener = document.querySelectorAll('.getSongsBtn')
+        for (var i = 0; i <tracksEventListener.length; i++) {
+          tracksEventListener[i].addEventListener('click', getSongs,{once:true});
+      }
+        // secondAPICall to retrieve playlist songs and print 10 of them on containers
+        
+        
 
-        }
 
+
+
+
+
+
+
+        
+
+
+
+
+        // ---------------------------MODAL---------------------------------
         // Code to create the html for the modal
-        function createModal() {
+        function createModal(info) {
+          console.log('modal created')
           // Creates and append first div for modal
           var modalContainer = document.createElement('div');
           modalContainer.className = 'modal';
@@ -159,7 +194,6 @@ var playlistID = newData.playlists.items[0].id;
           playlistBtn.setAttribute('data-target', 'modal-js-example');
           playlistBtn.setAttribute('id', 'getTracksBtn');
           document.body.children[5].appendChild(playlistBtn);
-
 
           // Creates and appends second div for modal
           var secondDivModal = document.createElement('div');
@@ -177,10 +211,10 @@ var playlistID = newData.playlists.items[0].id;
           var finalDivModal =document.createElement('div');
           finalDivModal.setAttribute('class', 'box');
           finalDivModal.setAttribute('id', 'playlistModal');
-          finalDivModal.textContent = 'This is a TEST!'
+          finalDivModal.textContent = 'Playlist:' + info.playlists.items[0].name;
           var finalDivCont = document.getElementById('appendModal');
           finalDivCont.appendChild(finalDivModal);
-          var modalParagraph = document.createElement('p')
+          var modalParagraph = document.createElement('p');
           modalParagraph.textContent = 'PlaylistName Tracks:'
           var appendParagraph = document.getElementById('playlistModal')
           appendParagraph.appendChild(modalParagraph);
@@ -189,14 +223,14 @@ var playlistID = newData.playlists.items[0].id;
           closeModalBtn.setAttribute('class', 'modal-close is-large');
           closeModalBtn.setAttribute('aria-label', 'close');
           document.getElementById('modal-js-example').appendChild(closeModalBtn);
+
+          console.log(info.items[0].track.name)
         }
-        printPlaylistItems();
-        createModal();
+
       })
  }
-
  // TODO: MODAL FUNCTIONALITY SET ON BUTTON
-
+/*
  document.addEventListener('DOMContentLoaded', () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -242,10 +276,23 @@ var playlistID = newData.playlists.items[0].id;
   });
 });
 
+// -----------------------------MODAL-------------------------------------
+
+*/
+
+
+
+
+
+
+
+
+
 //  Event listener that triggers with the Busca un Artista Button
   const button = document.getElementById('searchbtn');
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event) => {
     artistSearch();
+    event.preventDefault();
     // playlistSongSearch()
   });
 
@@ -255,7 +302,4 @@ var playlistID = newData.playlists.items[0].id;
 
 
 
-
-
-
- 
+// Code to change HTML when click the Check Playlist Info on the HTML button

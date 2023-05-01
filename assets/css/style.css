@@ -43,23 +43,50 @@
 
 
 
-.playlistContainer {
-    background-color: rgb(40, 65, 179);
+#mainPlaylistContainer {
     width: 33%;
+}
+
+.playlistContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: rgb(40, 65, 179);
+    width: 100%;
     padding: 5px;
     margin: 10px 0px;
     color: white;
     text-align: center;
+    align-items: center;
     border-radius: 8px;
 }
 
-.firstPlaylist {
+.playlistContainer a {
     color:black;
-
+    text-decoration: dashed;
+    font-weight: bold;
+    padding: 5px;
 }
+
+
+.playlistSongsContainer {
+    color:black;
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    padding: 25px;
+}
+
+
 
 .coverImage {
     border-radius: 25px;
     height: 100px;
     width: 100px;
+}
+
+.getSongsBtn {
+    background-color: rgb(201, 201, 201);
+    color:black;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
