@@ -20,11 +20,24 @@
 }
 
 #header {
-    display: none; /*inline*/
+    display: inline; /*inline*/
 }
 
 #searchbar {
-    display: none; /*inline*/
+    display: inline; /*inline*/
+}
+
+#dropdowns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none;
+}
+
+.moodboard {
+    padding: 12px;
 }
 
 
