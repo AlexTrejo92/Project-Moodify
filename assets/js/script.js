@@ -17,20 +17,21 @@ menu3.addEventListener('click', e=>{
     menu3.classList.toggle('is-active')
 })
 
-var startBtn = document.getElementById("startBtn");
-startBtn.addEventListener('click', () => {
-    var startPage = document.getElementById("startPage");
-    startPage.style.display= 'none';
-    var header = document.getElementById("header");
-    header.style.display='inline';
-    var searchbar = document.getElementById("searchbar");
-    searchbar.style.display='inline';
-    var dropdowns = document.getElementById("dropdowns");
-    // dropdowns.style.display ='inline';
-    dropdowns.style.visibility = "visible";
-    dropdowns.setAttribute("class","dropdownsinit");
-    results.style.visibility = "visible";
-});
+// ORIGINAL CODE XIME
+// var startBtn = document.getElementById("startBtn");
+// startBtn.addEventListener('click', () => {
+//     var startPage = document.getElementById("startPage");
+//     startPage.style.display= 'none';
+//     var header = document.getElementById("header");
+//     header.style.display='inline';
+//     var searchbar = document.getElementById("searchbar");
+//     searchbar.style.display='inline';
+//     var dropdowns = document.getElementById("dropdowns");
+//     // dropdowns.style.display ='inline';
+//     dropdowns.style.visibility = "visible";
+//     dropdowns.setAttribute("class","dropdownsinit");
+//     results.style.visibility = "visible";
+// });
 
 // ---------------------------------------------------------COMENTED SEARCHBTN FUNCTIONALITY
 // var searchBtn = document.getElementById("searchBtn");
@@ -40,9 +41,9 @@ startBtn.addEventListener('click', () => {
 // });
 
 // ------------------------------------------------------------------XIMENA 
-dropdowns.style.visibility = "hidden";
-results = document.getElementById("results");
-results.style.visibility = "hidden";
+// dropdowns.style.visibility = "hidden";
+// results = document.getElementById("results");
+// results.style.visibility = "hidden";
 
 var pixabayKey = "35740114-335bc84d305f30b42ed6482fb";
 var queryURL1;
@@ -91,6 +92,9 @@ document.querySelector("#submit").addEventListener("click", function(event){
     event.preventDefault();
     inputs = document.querySelector("#inputxim").value;
     pixabayApi(inputs,lan,category,color,check);
+    
+    var unhideResults= document.getElementById("results");
+    unhideResults.classList.remove("hidden");
   });
   
   //PIXABAY

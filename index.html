@@ -8,57 +8,30 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-
-
-    <section class="hero is-fullheight" id="startPage">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title is-size-1">
-            Welcome to Moodify
-          </p>
-          <p class="subtitle is-size-4">
-            Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?</p>
-            <button class="button is-medium is-responsive is-rounded is-outlined is-link" id="startBtn">
-              Start
-            </button>
-          </div>
-          <div class="start-background-pattern dot" id="test"></div>
-          <figure class="image">
-          </figure>
-           </div>
-            <div class="container">
-              <div class="columns is-mobile has-text-centered"> 
-                <div class="column is-one-third is-offset-one-third">  
-                <progress class="progress is-normal is-link" max="100">30%</progress>
-                  </div>
-              </div>
-            </div>
-    </section>
-
-
+    
   <section class="section" id="header">
   <nav class="level is-mobile">
     <p class="level-item has-text-centered">
-      <a class="link is-info">About us</a>
+      <a class="link has-text-success-dark" href="./assets/about-us/index.html">About us</a>
     </p>
     <p class="level-item has-text-centered">
       <a class="title is-size-2">Moodify</a>
     </p>
     <p class="level-item has-text-centered">
-      <a class="link is-info">FAQ</a>
+      <a class="link has-text-success-dark" href="./assets/faq/index.html">FAQ</a>
     </p>
   </nav>
   </section>
 
   <!-- user data input bar -->
-  <article class="panel is-link" id="searchbar">
+  <article class="panel is-black" id="searchbar">
     <p class="panel-heading">
       What are you looking for?
     </p>
     <div class="panel-block">
       <p class="control">
 
-        <input class="input is-link" type="text" placeholder="Search" id="inputxim">  <!-- Added id="inputxim" -->
+        <input class="input is-black" type="text" placeholder="Search" id="inputxim">  <!-- Added id="inputxim" -->
       </p>
       <!-- <input class="button has-text-centered" type="submit" value="Search" id="searchBtn"> -->     <!------- COMMENTED ISA'S BUTTON -->
       <button class="button" id="submit">Button</button>
@@ -163,77 +136,89 @@
   </div>
 
   
-  <section class="section" id="results">
+  <section class="section hidden" id="results">
       <div class="columns is-mobile has-text-centered"> 
 
 
           <!--PLAYLIST AREA START-->
           <div class="column is-two-fifths">
-            <!--song box start-->
-            <article class="message is-link">
+
+            <!-- <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
               </div>
               </article>
-            <!--song box end-->
-               <!--song box start-->
-               <article class="message is-link">
+
+
+              <article class="message is-grey">
                 <div class="message-header">
                   <p>song - artist</p>
                   <button class="delete" aria-label="delete"></button>
                 </div>
                 </article>
-              <!--song box end-->
-                 <!--song box start-->
-            <article class="message is-link">
+
+
+
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
               </div>
               </article>
-            <!--song box end-->
-               <!--song box start-->
-               <article class="message is-link">
+     
+
+
+               <article class="message is-grey">
                 <div class="message-header">
                   <p>song - artist</p>
                   <button class="delete" aria-label="delete"></button>
                 </div>
                 </article>
-              <!--song box end-->
-                 <!--song box start-->
-            <article class="message is-link">
+   
+
+
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
               </div>
               </article>
-            <!--song box end-->
-               <!--song box start-->
-               <article class="message is-link">
+
+
+
+               <article class="message is-grey">
                 <div class="message-header">
                   <p>song - artist</p>
                   <button class="delete" aria-label="delete"></button>
                 </div>
                 </article>
-              <!--song box end-->
-                 <!--song box start-->
-            <article class="message is-link">
+
+
+
+            <article class="message is-grey">
               <div class="message-header">
                 <p>song - artist</p>
                 <button class="delete" aria-label="delete"></button>
               </div>
               </article>
-            <!--song box end-->
-                <!--song box start-->
-                <article class="message is-link">
+
+
+                <article class="message is-grey">
                   <div class="message-header">
                     <p>song - artist</p>
                     <button class="delete" aria-label="delete"></button>
                   </div>
-                  </article>
-                <!--song box end-->
-          </div>
+                  </article> -->
+
+
+                  <div>
+                    <h2 class="subtitle is-size-4">
+                      Playlists
+                    </h2>
+                   
+                  </div>
+         </div>
 
 
           <!--------------------------------------MOODBOARD AREA START-->
@@ -321,10 +306,15 @@
           
 
         <!--MOODBOARD AREA END-->
-        
+    
 
 
       </div>
+
+      <section class="section">
+        <div> </div>
+      </section>
+
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
