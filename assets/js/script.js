@@ -1,128 +1,4 @@
 
-// var textArea = document.getElementById('');
-// var showInfoBtn = document.getElementById('btn');
-
-// // Authentication Code
-
-// function generateRandomString(length) {
-//     let text = '';
-//     let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  
-//     for (let i = 0; i < length; i++) {
-//       text += possible.charAt(Math.floor(Math.random() * possible.length));
-//     }
-//     return text;
-//   }
-  
-
-//   async function generateCodeChallenge(codeVerifier) {
-//     function base64encode(string) {
-//       return btoa(String.fromCharCode.apply(null, new Uint8Array(string)))
-//         .replace(/\+/g, '-')
-//         .replace(/\//g, '_')
-//         .replace(/=+$/, '');
-//     }
-  
-//     const encoder = new TextEncoder();
-//     const data = encoder.encode(codeVerifier);
-//     const digest = await window.crypto.subtle.digest('SHA-256', data);
-  
-//     return base64encode(digest);
-//   }
-  
-//   const clientId = 'b0a0b5ec72ab484ca47ab6994da9a3e0';
-//   const redirectUri = 'http://127.0.0.1:5500/testServer.html';
-  
-//   let codeVerifier = generateRandomString(128);
-
-
-// Call to API
-
-// FIRST AUTHORIZATION FLOW ATTEMPTED, WOULDNT WORK FOR THE APP
-
-// function getApi() {
-//     console.log('The GetApi function is running');
-    
-//     var requestUrl = 'https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH?si=s7FjS9SUTTSnoNO9dblzVg';
-
-//     fetch(requestUrl, {
-//         // headers: {Authentication: 'Bearer BQCmD8YTEfGsY9mBjOT3DYabjT8vyAfpAM07a_zlDXpTrSh4PHerT8NYRIRcl5KxARv5z5QTUA5ZJdiZtMe9RimEu41xa20Tr3iO5Gp4Vp9YsKa1QCDi'}
-//     })
-//     .then(function (response){
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         console.log(data)
-//         // textArea.appendChild(link);
-//     }
-//     )
-// }
-
-// showInfoBtn.addEventListener('click', ()=> generateCodeChallenge(codeVerifier).then(codeChallenge => {
-//     let state = generateRandomString(16);
-//     let scope = 'user-read-private user-read-email';
-  
-//     localStorage.setItem('code_verifier', codeVerifier);
-  
-//     let args = new URLSearchParams({
-//       response_type: 'code',
-//       client_id: clientId,
-//       scope: scope,
-//       redirect_uri: redirectUri,
-//       state: state,
-//       code_challenge_method: 'S256',
-//       code_challenge: codeChallenge
-//     });
-  
-//     window.location = 'https://accounts.spotify.com/authorize?' + args;
-//   })) ;
-
-
-// JS code to retrieve Spotify API jSON.
-
-// {"access_token":"BQBBkITqXzKIqxEbAEc5hMHwQQZqTzIN15ah83h1wH43J_4QkrGo1j4Fgq4sRulIVXK3B7AdXjUep6A5zThRKN-2BhB5iWtHmeHhzI9KEs0PpZB98dXx","token_type":"Bearer","expires_in":3600}
-
-// Token final
-// {
-//     "access_token": "BQCmD8YTEfGsY9mBjOT3DYabjT8vyAfpAM07a_zlDXpTrSh4PHerT8NYRIRcl5KxARv5z5QTUA5ZJdiZtMe9RimEu41xa20Tr3iO5Gp4Vp9YsKa1QCDi",
-//     "token_type": "Bearer",
-//     "expires_in": 3600
-// }
-
-// Arctic Monkeys ID
-//"https://open.spotify.com/artist/7Ln80lUS6He07XvHI8qqHH?si=s7FjS9SUTTSnoNO9dblzVg"
-
-
-
-// Isas code
-
-
-// // mobile navbar menu
-// var burgerIcon = document.querySelector('#burger');
-// var navbarMenu = document.querySelector('#nav-links');
-
-// burgerIcon.addEventListener('click', () => {
-//     navbarMenu.classList.toggle('is-active')
-// })
-
-// var menu1 = document.getElementById("dropdown1");
-// menu1.addEventListener('click', e=>{
-//     e.stopPropagation()
-//     menu1.classList.toggle('is-active')
-// })
-
-// var menu2 = document.getElementById("dropdown2");
-// menu2.addEventListener('click', e=>{
-//     e.stopPropagation()
-//     menu2.classList.toggle('is-active')
-// })
-
-// var menu3 = document.getElementById("dropdown3");
-// menu3.addEventListener('click', e=>{
-//     e.stopPropagation()
-//     menu3.classList.toggle('is-active')
-// })
-
 // Replace with your own client ID and client secret
 const clientId = 'b0a0b5ec72ab484ca47ab6994da9a3e0';
 const clientSecret = 'de7986ead2c54716b8962be43be72b59';
@@ -432,3 +308,129 @@ var playlistID = newData.playlists.items[0].id;
 
 
 
+
+var menu3 = document.getElementById("dropdown3");
+menu3.addEventListener('click', e=>{
+    e.stopPropagation()
+    menu3.classList.toggle('is-active')
+})
+
+// ORIGINAL CODE XIME
+// var startBtn = document.getElementById("startBtn");
+// startBtn.addEventListener('click', () => {
+//     var startPage = document.getElementById("startPage");
+//     startPage.style.display= 'none';
+//     var header = document.getElementById("header");
+//     header.style.display='inline';
+//     var searchbar = document.getElementById("searchbar");
+//     searchbar.style.display='inline';
+//     var dropdowns = document.getElementById("dropdowns");
+//     // dropdowns.style.display ='inline';
+//     dropdowns.style.visibility = "visible";
+//     dropdowns.setAttribute("class","dropdownsinit");
+//     results.style.visibility = "visible";
+// });
+
+// ---------------------------------------------------------COMENTED SEARCHBTN FUNCTIONALITY
+// var searchBtn = document.getElementById("searchBtn");
+// searchBtn.addEventListener('click', () => {
+//     var results = document.getElementById("results");
+//     results.style.display = 'block';
+// });
+
+// ------------------------------------------------------------------XIMENA 
+// dropdowns.style.visibility = "hidden";
+// results = document.getElementById("results");
+// results.style.visibility = "hidden";
+
+var pixabayKey = "35740114-335bc84d305f30b42ed6482fb";
+var queryURL1;
+var lan;
+var color;
+var category;
+var check;
+var inputs;
+var r;
+
+//  Parameter Options LANGUAGE 
+var lanOptions = $('.lan');  
+lanOptions.on('click', function () { 
+  lan =(this.id);
+  console.log("Language: "+lan)
+});
+
+//  Parameter Options COLOR 
+var colorOptions = $('.color');  
+colorOptions.on('click', function () { 
+  color =(this.id);
+  console.log("Color: "+color)
+});
+
+//  Parameter Options CATEGORY
+var categoryOptions = $('.category');  
+categoryOptions.on('click', function () { 
+  category =(this.id);
+  console.log("category: "+category)
+});
+
+// SafeSearch checkbox-
+var checkboxx = document.querySelector(".safeSearch");
+checkboxx.addEventListener('click', function() {
+  if(checkboxx.checked) {
+    console.log("Checked");
+    check = "true";
+  } else {
+    console.log("UNChecked");
+    check = "false";
+  }
+});
+
+//  SUBMIT BUTTON 
+document.querySelector("#submit").addEventListener("click", function(event){
+    event.preventDefault();
+    inputs = document.querySelector("#inputxim").value;
+    pixabayApi(inputs,lan,category,color,check);
+    
+    var unhideResults= document.getElementById("results");
+    unhideResults.classList.remove("hidden");
+  });
+  
+  //PIXABAY
+  // show your users where the images and videos are from. 
+  //100 requests per minute.
+  function pixabayApi(inputs,lan,category,color,check) {
+    console.log("   pixabayApi()");
+    console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
+    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&lang="+lan+"&image_type=photo&editors_choice=true&category="+category+"&colors="+color+"&safesearch="+check;
+    // https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb   &q=yellow+flowers&image_type=photo
+  
+    fetch(queryURL1)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        var myData = data;
+        console.log('data from pixabayApi:');
+        console.log(myData);
+        document.querySelector(".messages").textContent="We found "+myData.total+" images."
+        displayImgs(myData)
+      });
+      
+  }
+  
+  function displayImgs(myData){
+    var datasize = myData.total;
+    console.log("datasize: "+datasize);
+    if (datasize<10){
+      r= datasize;
+    } else {
+      r=10;
+    }
+    for (n=0; n<r; n++){
+      document.getElementById(n).setAttribute("src", myData.hits[n].largeImageURL);
+    }
+    lan="";
+    color="";
+    category="";
+    console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
+  }
