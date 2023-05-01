@@ -14,7 +14,7 @@ let accessToken;
 // TODO: LOCAL STORAGE GET (siempre se hace)
 
 // TODO: This variable should be filled with the user input (dropdown or form);
-let genre = 'pop';
+let genre = 'focus';
 // Create the fetch request to get the access token
 fetch(tokenUrl, {
   method: 'POST',
