@@ -64,7 +64,7 @@ fetch(tokenUrl, {
             // add the class playlistContainer to style the divs
             newPlaylistContainer.className = "playlistContainer";
             // Appends the div to the webpage (prints)
-            document.body.children[4].appendChild(newPlaylistContainer);
+            document.getElementById('mainPlaylistContainer').appendChild(newPlaylistContainer);
           }
           // Second for loop to add the URL to the Playlist and the Cover and a button to trigger modal
           for (var i = 0; i < data.playlists.items.length; i++) {
@@ -88,15 +88,15 @@ fetch(tokenUrl, {
             // Adds the attribute so the link is opened in a new tab
             urlPlaylistContainer.setAttribute('target', '_blank');
             // Appends the anchor tags and the url to the Images for the covers
-            document.body.children[4].children[i].appendChild(imgContainer);
-            document.body.children[4].children[i].appendChild(playlistName);
-            document.body.children[4].children[i].appendChild(urlPlaylistContainer);
+            document.getElementById('mainPlaylistContainer').children[i].appendChild(imgContainer);
+            document.getElementById('mainPlaylistContainer').children[i].appendChild(playlistName);
+            document.getElementById('mainPlaylistContainer').children[i].appendChild(urlPlaylistContainer);
             
           }
           var getTracksBtn = document.createElement('button');
           getTracksBtn.innerText = 'Show tracks'
           getTracksBtn.setAttribute('class', 'getSongsBtn');
-          document.body.children[4].children[0].appendChild(getTracksBtn);
+          document.querySelector('.playlistContainer').appendChild(getTracksBtn);
         }
         secondSpotifyCall(data);
         printPlaylists();

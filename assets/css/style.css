@@ -40,7 +40,7 @@
 
 
 #mainPlaylistContainer {
-    width: 33%;
+    width: 100%;
 }
 
 .playlistContainer {
@@ -68,10 +68,6 @@
 #dropdowns {
     display: flex;
     justify-content: space-around;
-}
-
-.hidden {
-    display: none;
 }
 
 .moodboard {
