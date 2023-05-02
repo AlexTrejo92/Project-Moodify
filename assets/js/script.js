@@ -11,6 +11,14 @@ let accessToken;
 // this will be replace by the user search
 // let artist = 'arctic monkeys';
 
+
+// -------------------------------------FUNCTIONALITY OF DROPDOWNS
+var menu2 = document.getElementById("dropdown2");
+menu2.addEventListener('click', e=>{
+    e.stopPropagation()
+    menu2.classList.toggle('is-active')
+
+
 // TODO: LocalStorage showOnboarding set (el boton de start)
 // TODO: LOCAL STORAGE GET (siempre se hace)
 
@@ -24,6 +32,7 @@ fetch(tokenUrl, {
     'Content-Type': 'application/x-www-form-urlencoded'
   },
   body: 'grant_type=client_credentials'
+
 })
   .then(response => {
     if (response.ok) {
@@ -165,6 +174,7 @@ var playlistID = newData.playlists.items[0].id;
 
 
 
+
 var menu3 = document.getElementById("dropdown3");
 menu3.addEventListener('click', e=>{
     e.stopPropagation()
@@ -209,17 +219,18 @@ var inputs;
 var r;
 
 //  Parameter Options LANGUAGE 
-var lanOptions = $('.lan');  
-lanOptions.on('click', function () { 
-  lan =(this.id);
-  console.log("Language: "+lan)
-});
+// var lanOptions = $('.lan');  
+// lanOptions.on('click', function () { 
+//   lan =(this.id);
+//   console.log("Language: "+lan)
+// });
 
 //  Parameter Options COLOR 
 var colorOptions = $('.color');  
 colorOptions.on('click', function () { 
   color =(this.id);
   console.log("Color: "+color)
+  document.getElementById("colorDropdown").textContent=this.innerHTML;
 });
 
 //  Parameter Options CATEGORY
@@ -227,6 +238,7 @@ var categoryOptions = $('.category');
 categoryOptions.on('click', function () { 
   category =(this.id);
   console.log("category: "+category)
+  document.getElementById("genreDropdown").textContent=this.innerHTML;
 });
 
 // SafeSearch checkbox-
@@ -265,7 +277,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
   function pixabayApi(inputs,lan,category,color,check) {
     console.log("   pixabayApi()");
     console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
-    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&lang="+lan+"&image_type=photo&editors_choice=true&category="+category+"&colors="+color+"&safesearch="+check;
+    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&image_type=photo&editors_choice=true&colors="+color+"&safesearch="+check;
     // https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb   &q=yellow+flowers&image_type=photo
   
     fetch(queryURL1)
