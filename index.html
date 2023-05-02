@@ -8,298 +8,153 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
-
-
-    <!-- <section class="hero is-fullheight" id="startPage">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <p class="title is-size-1">
-            Welcome to Moodify
-          </p>
-          <p class="subtitle is-size-4">
-            Ready to create your <strong>playlist</strong> and <strong>moodboard</strong>?</p>
-            <button class="button is-medium is-responsive is-rounded is-outlined is-link" id="startBtn">
-              Start
-            </button>
-          </div>
-          <div class="start-background-pattern dot" id="test"></div>
-          <figure class="image">
-          </figure>
-           </div>
-            <div class="container">
-              <div class="columns is-mobile has-text-centered"> 
-                <div class="column is-one-third is-offset-one-third">  
-                <progress class="progress is-normal is-link" max="100">30%</progress>
-                  </div>
-              </div>
-            </div>
-    </section> -->
-
-
+    
   <section class="section" id="header">
   <nav class="level is-mobile">
     <p class="level-item has-text-centered">
-      <a class="link is-info">About us</a>
+      <a class="link has-text-success-dark" href="./assets/about-us/index.html">About us</a>
     </p>
     <p class="level-item has-text-centered">
       <a class="title is-size-2">Moodify</a>
     </p>
     <p class="level-item has-text-centered">
-      <a class="link is-info">FAQ</a>
+      <a class="link has-text-success-dark" href="./assets/faq/index.html">FAQ</a>
     </p>
   </nav>
   </section>
 
   <!-- user data input bar -->
- <div id="userinputbar"> 
-    <div class=" panel is-link" id="searchbar"> <!--Used to be article class=" panel is-link"-->
-      <p class="panel-heading">
-        What are you looking for?
+  <article class="panel is-black" id="searchbar">
+    <p class="panel-heading">
+      What are you looking for?
+    </p>
+    <div class="panel-block">
+      <p class="control">
+
+        <input class="input is-black" type="text" placeholder="Search" id="inputxim">  <!-- Added id="inputxim" -->
       </p>
+      <button id="searchbtn">Search playlist!</button>
 
-      <div  id="dropdowns"> <!-------class=" columns is-mobile has-text-centered" class box was here  -->
+      <!-- <input class="button has-text-centered" type="submit" value="Search" id="searchBtn"> -->     <!------- COMMENTED ISA'S BUTTON -->
+      <button class="button" id="submit">Button</button>
+    </div>
+  </article>
 
-        <!--START OF FIRST column with dropdown-->
-        <div class="dropdown has-text-left" id="dropdown1">  
+  <div class="box columns is-mobile has-text-centered" id="dropdowns">
 
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-              <span id="languageDropdown">Language</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
+      <!--START OF FIRST column with dropdown-->
+      <div class="dropdown has-text-left" id="dropdown1">  <!------- ELIMINATED class="column is-one-third"  -->
 
-          <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-            <div class="dropdown-content">
-              <a class="lan dropdown-item" id="en">English (Default)</a>
-              <hr class="dropdown-divider">
-              <a class="lan dropdown-item"class="lanOption" id="es">Español</a>
-              <a class="lan dropdown-item" id="fr">Français</a>
-            </div>
-          </div>
-        
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+            <span>Language</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
         </div>
-        <!--END OF FIRST column with dropdown-->
 
-        <!--START OF SECOND column with dropdown-->
-        <div class="dropdown has-text-left" id="dropdown2">   <!------- ELIMINATED class="column is-one-third"  -->
-
-          <div class="dropdown-trigger">
-
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-              <span id="colorDropdown">Color</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+          <div class="dropdown-content">
+            <a class="lan dropdown-item" id="en">English (Default)</a>
+            <hr class="dropdown-divider">
+            <a class="lan dropdown-item"class="lanOption" id="es">Español</a>
+            <a class="lan dropdown-item" id="fr">Français</a>
           </div>
-
-          <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-
-            <div class="dropdown-content">
-              <a class="color dropdown-item" id="grayscale">Grayscale</a>
-              <a class="color dropdown-item" id="red">Red</a>
-              <a class="color dropdown-item" id="orange">Orange</a>
-              <a class="color dropdown-item" id="yellow">Yellow</a>
-              <a class="color dropdown-item" id="green">Green</a>
-              <a class="color dropdown-item" id="blue">Blue</a>
-              <a class="color dropdown-item" id="pink">Pink</a>
-              <a class="color dropdown-item" id="brown">Brown</a>
-              <a class="color dropdown-item" id="white">White</a>
-              <a class="color dropdown-item" id="black">Black</a>
-            </div>
-          </div>
-        
         </div>
-        <!--END OF SECOND column with dropdown-->
-
-        <!--START OF THIRD column with dropdown-->
-        <div class="dropdown has-text-left" id="dropdown3">  
-
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-              <span id="categoryDropdown">Genre</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-
-          <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-
-            <div class="dropdown-content">
-              <!--POP, ROCK, METAL, PUNK, ALTERNATIVE, DINNER, PARTY, SLEEP, FOCUS-->
-              <a class="category dropdown-item" id="pop">Pop</a>
-              <a class="category dropdown-item" id="rock">Rock</a>
-              <a class="category dropdown-item" id="metal">Metal</a>
-              <a class="category dropdown-item" id="punk">Punk</a>
-              <a class="category dropdown-item" id="alternative">Alternative</a>
-              <a class="category dropdown-item" id="dinner">Dinner</a>
-              <a class="category dropdown-item" id="party">Party</a>
-              <a class="category dropdown-item" id="sleep">Sleep</a>
-              <a class="category dropdown-item" id="focus">Focus</a>
-            </div>
-          </div>
-
-        </div>
-        <!--END OF THIRD column with dropdown-->
-
-        <div> safesearch
-          <input type="checkbox" class="safeSearch" checked>
-        </div> 
-
       
-
-      </div>  <!--what is this?-->
-
-
-      <div class="panel-block">
-        <p class="control">
-          <input class="input is-link" type="text" placeholder="Search" id="inputxim">  <!-- Added id="inputxim" -->
-        </p>
-        <!-- <input class="button has-text-centered" type="submit" value="Search" id="searchBtn"> -->     <!------- COMMENTED ISA'S BUTTON -->
-        <button class="button" id="submit">Button</button>
       </div>
-    </div> <!-- Used to be <article> -->
+      <!--END OF FIRST column with dropdown-->
+
+      <!--START OF SECOND column with dropdown-->
+      <div class="dropdown has-text-left" id="dropdown2">   <!------- ELIMINATED class="column is-one-third"  -->
+
+        <div class="dropdown-trigger">
+
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+            <span>Color</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+
+          <div class="dropdown-content">
+            <a class="color dropdown-item" id="grayscale">Grayscale</a>
+            <a class="color dropdown-item" id="red">Red</a>
+            <a class="color dropdown-item" id="orange">Orange</a>
+            <a class="color dropdown-item" id="yellow">Yellow</a>
+            <a class="color dropdown-item" id="green">Green</a>
+            <a class="color dropdown-item" id="blue">Blue</a>
+            <a class="color dropdown-item" id="pink">Pink</a>
+            <a class="color dropdown-item" id="brown">Brown</a>
+            <a class="color dropdown-item" id="white">White</a>
+            <a class="color dropdown-item" id="black">Black</a>
+          </div>
+        </div>
+      
+      </div>
+      <!--END OF SECOND column with dropdown-->
+
+      <!--START OF THIRD column with dropdown-->
+      <div class="dropdown has-text-left" id="dropdown3">  
+
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+            <span>Category</span>
+
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+
+
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+
+          <div class="dropdown-content">
+    
+            <a class="category dropdown-item" id="fashion">Fashion</a>
+            <a class="category dropdown-item" id="nature">Nature</a>
+            <a class="category dropdown-item" id="science">Science</a>
+            <a class="category dropdown-item" id="feelings">Feelings</a>
+            <a class="category dropdown-item" id="people">People</a>
+            <a class="category dropdown-item" id="places">Places</a>
+            <a class="category dropdown-item" id="animals">Animals</a>
+            <a class="category dropdown-item" id="travel">Travel</a>
+            <a class="category dropdown-item" id="sports">Sports</a>
+          </div>
+        </div>
+
+      </div>
+      <!--END OF THIRD column with dropdown-->
+
+      <div>safesearch
+        <input type="checkbox" class="safeSearch" checked></div> 
+      </div>
+
   </div>
 
-  
-  <section class="section" id="results">
+  <section class="section hidden" id="results">
       <div class="columns is-mobile has-text-centered"> 
 
 
-          <!--PLAYLIST AREA START-->
-          <div class="column is-two-fifths">
-            <!--song box start-->
-            <article class="message is-link">
-              <div class="message-header">
-                <p>song - artist</p>
-                <button class="delete" aria-label="delete"></button>
-              </div>
-              </article>
-            <!--song box end-->
-               <!--song box start-->
-               <article class="message is-link">
-                <div class="message-header">
-                  <p>song - artist</p>
-                  <button class="delete" aria-label="delete"></button>
-                </div>
-                </article>
-              <!--song box end-->
-                 <!--song box start-->
-            <article class="message is-link">
-              <div class="message-header">
-                <p>song - artist</p>
-                <button class="delete" aria-label="delete"></button>
-              </div>
-              </article>
-            <!--song box end-->
-               <!--song box start-->
-               <article class="message is-link">
-                <div class="message-header">
-                  <p>song - artist</p>
-                  <button class="delete" aria-label="delete"></button>
-                </div>
-                </article>
-              <!--song box end-->
-                 <!--song box start-->
-            <article class="message is-link">
-              <div class="message-header">
-                <p>song - artist</p>
-                <button class="delete" aria-label="delete"></button>
-              </div>
-              </article>
-            <!--song box end-->
-               <!--song box start-->
-               <article class="message is-link">
-                <div class="message-header">
-                  <p>song - artist</p>
-                  <button class="delete" aria-label="delete"></button>
-                </div>
-                </article>
-              <!--song box end-->
-                 <!--song box start-->
-            <article class="message is-link">
-              <div class="message-header">
-                <p>song - artist</p>
-                <button class="delete" aria-label="delete"></button>
-              </div>
-              </article>
-            <!--song box end-->
-                <!--song box start-->
-                <article class="message is-link">
-                  <div class="message-header">
-                    <p>song - artist</p>
-                    <button class="delete" aria-label="delete"></button>
-                  </div>
-                  </article>
-                <!--song box end-->
-          </div>
+          <div class="column is-two-fifths section">
 
-          <!--------------------------------------MOODBOARD AREA START-->
-          <!-- <div class="column is-three-fifths"> -->
-            <!-- <div class="tile is-ancestor is-align-content-flex-start">
-              <div class="tile is-vertical is-8">
-                <div class="tile">
-                  <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                      <p class="title">Vertical...</p>
-                      <p class="subtitle">Top tile</p>
-                    </article>
-                    <article class="tile is-child notification is-warning">
-                      <p class="title">...tiles</p>
-                      <p class="subtitle">Bottom tile</p>
-                    </article>
-                  </div>
-                  <div class="tile is-parent">
-                    <article class="tile is-child notification is-info">
-                      <p class="title">Middle tile</p>
-                      <p class="subtitle">With an image</p>
-                      <figure class="image is-4by3">
-                        <img src="https://bulma.io/images/placeholders/640x480.png">
-                      </figure>
-                    </article>
-                  </div>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-danger">
-                    <p class="title">Wide tile</p>
-                    <p class="subtitle">Aligned with the right tile</p>
-                    <div class="content"> -->
-                      <!-- Content -->
-                    <!-- </div>
-                  </article>
-                </div>
-              </div>
-              <div class="tile is-parent">
-                <article class="tile is-child notification is-success">
-                  <div class="content">
-                    <p class="title">Tall tile</p>
-                    <p class="subtitle">With even more content</p>
-                    <div class="content"> -->
-                      <!-- Content -->
-                    <!-- </div>
-                  </div>
-                </article>
-              </div>
-            </div>       -->
 
-            <!-- <div class="cards">
-            <div class="card">ONE</div>
-            <div class="card">TWO</div>
-            <div class="card">THREE</div>
-            <div class="card">FOUR</div>
-            <div class="card">FIVE</div>
-            <div class="card">SIX</div>
-            <div class="card">SEVEN</div>
-            <div class="card">EIGHT</div>
-            <div class="card">NINE</div>
+                  <div>
+                    <h2 class="subtitle is-size-4">
+                      Playlists
+                    </h2>
+                  </div>
 
-            </div>
+                  <div  id="mainPlaylistContainer"></div>
 
-          </div> -->
+         </div>
+
+
 
           <div class="moodboard">
             <h2 class="subtitle is-size-4" >Your moodboard</h2>
@@ -318,13 +173,20 @@
             </div>        
           </div>
           
+
         <!--MOODBOARD AREA END-->
-        
+    
 
 
       </div>
+
+      <section class="section"  id="secondSection">
+        <div> </div>
+      </section>
+
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="./assets/js/script.js"></script>
   </body>
+
 </html>

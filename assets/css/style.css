@@ -1,16 +1,79 @@
 #startPage {
-    margin-top: 30vh;
-    margin-bottom: 40vh;
     display: block; /*block*/
+    background-image: url(../assets/images/moodboard1.jpg);
 }
 
-/* #header {
-    display: none; 
+#startBox {
+    margin: auto;
+    margin-top: 30vh;
+
+}
+
+#startPageTitle {
+    color: black;
+}
+
+
+#startBtn {
+    color:grey;
+    
+}
+
+#header {
+    display: inline; /*inline*/
 }
 
 #searchbar {
-    display: none; 
+    display: inline; /*inline*/
+
+}
+
+/* #results {
+    display: block;
 } */
+
+.hidden {
+    display: none;
+}
+
+
+
+
+#mainPlaylistContainer {
+    width: 100%;
+}
+
+.playlistContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: rgb(40, 65, 179);
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.playlistContainer a {
+    color:black;
+    text-decoration: dashed;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+#dropdowns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.moodboard {
+    padding: 12px;
+}
+
 
 /* ----------------------------- Im hidding & displaying the dropdowns and the results from JS with a dropdowns.style.visibility = "hidden";  */
 /* #results {
@@ -26,11 +89,11 @@
     margin: 1%;
 }
 
-#dropdowns{
+.dropdownsinit{
     display: flex;
     justify-content: space-between;
-    margin: 0 4%;
-    padding-top: 1.5%;
+    margin: 0 3%;
+    padding-bottom: 2%;
 }
 
 /* style for moodboard */
@@ -128,12 +191,25 @@
 }
 /* -----------------STYLE FOR MOODBOARD  */
 
-/* -----------------STYLE EXTRA XIMENA  */
-#searchbarr{
-    padding: 2%;
-    border-style: solid;
-    background: linear-gradient(blue, pink);
+
+.playlistSongsContainer {
+    color:black;
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+    padding: 25px;
 }
-#userinputbar{
-    padding: 2%;
+
+
+
+.coverImage {
+    border-radius: 25px;
+    height: 100px;
+    width: 100px;
+}
+
+.getSongsBtn {
+    background-color: rgb(201, 201, 201);
+    color:black;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
