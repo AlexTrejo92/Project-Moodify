@@ -39,9 +39,6 @@
     display: none;
 }
 
-
-
-
 #mainPlaylistContainer {
     width: 100%;
 }
@@ -50,7 +47,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: rgb(40, 65, 179);
+    background-color: rgb(91, 92, 95);
     width: 100%;
     padding: 5px;
     margin: 10px 0px;
@@ -70,7 +67,8 @@
 
 #dropdowns {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    padding: 2%;
 }
 
 .moodboard {
@@ -78,18 +76,20 @@
 }
 
 
-/* ----------------------------- Im hidding & displaying the dropdowns and the results from JS with a dropdowns.style.visibility = "hidden";  */
-/* #results {
-    display: none; 
-} */
-/* #dropdowns {
-    display: none; 
-} */
-
 /* ------------------------------------------XIMENA */
 /* style for dropdowns */
 #submit{
-    margin: 1%;
+    margin-left: 1%;
+
+}
+
+#srch{
+    display: flex;
+}
+
+.control{
+    padding-left: 2%;
+    width: 90%;
 }
 
 .dropdownsinit{
@@ -193,7 +193,6 @@
     grid-row-end: 9;
 }
 /* -----------------STYLE FOR MOODBOARD  */
-
 
 .playlistSongsContainer {
     color:black;
