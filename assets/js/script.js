@@ -58,6 +58,7 @@ var lanOptions = $('.lan');
 lanOptions.on('click', function () { 
   lan =(this.id);
   console.log("Language: "+lan)
+  document.getElementById("languageDropdown").textContent=this.innerHTML;
 });
 
 //  Parameter Options COLOR 
@@ -65,6 +66,7 @@ var colorOptions = $('.color');
 colorOptions.on('click', function () { 
   color =(this.id);
   console.log("Color: "+color)
+  document.getElementById("colorDropdown").textContent=this.innerHTML;
 });
 
 //  Parameter Options CATEGORY
@@ -72,6 +74,7 @@ var categoryOptions = $('.category');
 categoryOptions.on('click', function () { 
   category =(this.id);
   console.log("category: "+category)
+  document.getElementById("categoryDropdown").textContent=this.innerHTML;
 });
 
 // SafeSearch checkbox-

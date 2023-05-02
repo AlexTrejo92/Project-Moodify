@@ -29,8 +29,8 @@
 .dropdownsinit{
     display: flex;
     justify-content: space-between;
-    margin: 0 3%;
-    padding-bottom: 2%;
+    margin: 0 4%;
+    padding-top: 1.5%;
 }
 
 /* style for moodboard */
@@ -127,3 +127,13 @@
     grid-row-end: 9;
 }
 /* -----------------STYLE FOR MOODBOARD  */
+
+/* -----------------STYLE EXTRA XIMENA  */
+#searchbarr{
+    padding: 2%;
+    border-style: solid;
+    background: linear-gradient(blue, pink);
+}
+#userinputbar{
+    padding: 2%;
+}
