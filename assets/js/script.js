@@ -234,7 +234,7 @@ colorOptions.on('click', function () {
   document.getElementById("colorDropdown").textContent=this.innerHTML;
 });
 
-//  Parameter Options CATEGORY
+//  Parameter Options GENRE
 var categoryOptions = $('.category');  
 categoryOptions.on('click', function () { 
   category =(this.id);
@@ -270,7 +270,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
   function pixabayApi(inputs,lan,category,color,check) {
     console.log("   pixabayApi()");
     console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
-    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&lang="+lan+"&image_type=photo&editors_choice=true&category="+category+"&colors="+color+"&safesearch="+check;
+    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&image_type=photo&editors_choice=true&colors="+color+"&safesearch="+check;
     // https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb   &q=yellow+flowers&image_type=photo
   
     fetch(queryURL1)
