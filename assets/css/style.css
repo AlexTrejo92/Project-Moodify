@@ -39,9 +39,6 @@
     display: none;
 }
 
-
-
-
 #mainPlaylistContainer {
     width: 100%;
 }
@@ -70,7 +67,8 @@
 
 #dropdowns {
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
+    padding: 2%;
 }
 
 .moodboard {
@@ -78,18 +76,20 @@
 }
 
 
-/* ----------------------------- Im hidding & displaying the dropdowns and the results from JS with a dropdowns.style.visibility = "hidden";  */
-/* #results {
-    display: none; 
-} */
-/* #dropdowns {
-    display: none; 
-} */
-
 /* ------------------------------------------XIMENA */
 /* style for dropdowns */
 #submit{
-    margin: 1%;
+    margin-left: 1%;
+
+}
+
+#srch{
+    display: flex;
+}
+
+.control{
+    padding-left: 2%;
+    width: 90%;
 }
 
 .dropdownsinit{

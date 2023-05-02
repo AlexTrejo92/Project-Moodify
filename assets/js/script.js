@@ -188,7 +188,7 @@ var queryURL1;
 var lan;
 var color;
 var category;
-var check;
+var check = true;
 var inputs;
 var inputs2;
 var r;
@@ -245,7 +245,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
       category = optionsCat[randomNumber];
     }
     console.log(category);
-    // artistSearch();
+    artistSearch();
 
     var unhideResults= document.getElementById("results");
     unhideResults.classList.remove("hidden");
