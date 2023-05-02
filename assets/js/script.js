@@ -180,6 +180,8 @@ menu3.addEventListener('click', e=>{
 
 
 // ------------------------------------------------------------------XIMENA 
+document.getElementById("moreImgs").setAttribute("style", "display: none");
+
 
 var pixabayKey = "35740114-335bc84d305f30b42ed6482fb";
 var queryURL1;
@@ -243,10 +245,17 @@ document.querySelector("#submit").addEventListener("click", function(event){
       category = optionsCat[randomNumber];
     }
     console.log(category);
-    artistSearch();
+    // artistSearch();
 
     var unhideResults= document.getElementById("results");
     unhideResults.classList.remove("hidden");
+
+    var errasemore = document.querySelectorAll(".more");
+    console.log("errasemore: ",errasemore);
+    for (n=0;n<errasemore.length;n++){
+      document.getElementById("pixabay2").removeChild(errasemore[n]);
+    }
+    document.getElementById("pixabay2").classList.remove('gallery');
   });
   
   //PIXABAY
@@ -255,7 +264,11 @@ document.querySelector("#submit").addEventListener("click", function(event){
   function pixabayApi(inputs2,category,color,check) {
     console.log("   pixabayApi()");
     console.log("inputs: "+inputs2+" genre: "+category+" color: "+color);
-    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+inputs2+"+"+color+"&image_type=photo&editors_choice=true&safesearch="+check;
+    if (color === undefined){
+      var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+inputs2+"&image_type=photo&editors_choice=true&safesearch="+check;
+    } else {
+      var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+inputs2+"+"+color+"&image_type=photo&editors_choice=true&safesearch="+check;
+    }
     console.log("QueryURL: "+queryURL1)
     // https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb   &q=yellow+flowers&image_type=photo
   
@@ -288,4 +301,24 @@ document.querySelector("#submit").addEventListener("click", function(event){
     color="";
     category="";
     console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
+
+    if (datasize>20){
+      document.getElementById("moreImgs").setAttribute("style", "display: inline");
+      moreImgs(myData);
+    }
+  }
+
+  //  More images button 
+  function moreImgs(myData){
+    document.querySelector("#moreImgs").addEventListener("click", function(event){
+      for (n=0;n<10;n++){
+        var newEl = document.createElement('img');
+        newEl.setAttribute('class', 'more gallery__img img' + (n+1));
+        newEl.setAttribute('id',(n+10));
+        document.getElementById("pixabay2").setAttribute('class', 'gallery');
+        document.getElementById("pixabay2").appendChild(newEl);
+        document.getElementById(n+10).setAttribute("src", myData.hits[n+10].largeImageURL);
+      }
+      document.getElementById("moreImgs").setAttribute("style", "display: none");
+    });
   }
