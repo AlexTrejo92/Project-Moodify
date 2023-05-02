@@ -1,6 +1,6 @@
 #startPage {
     display: block; /*block*/
-    background-image: url(../assets/images/moodboard1.jpg);
+    background-image: url(/assets/images/moodboard1.jpg);
 }
 
 #startBox {
