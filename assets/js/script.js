@@ -168,8 +168,12 @@ var playlistID = newData.playlists.items[0].id;
 
 // Code to change HTML when click the Check Playlist Info on the HTML button
 
-
-
+// -------------------------------------FUNCTIONALITY OF DROPDOWNS 
+var menu2 = document.getElementById("dropdown2");
+menu2.addEventListener('click', e=>{
+    e.stopPropagation()
+    menu2.classList.toggle('is-active')
+})
 
 
 var menu3 = document.getElementById("dropdown3");
@@ -216,17 +220,18 @@ var inputs;
 var r;
 
 //  Parameter Options LANGUAGE 
-var lanOptions = $('.lan');  
-lanOptions.on('click', function () { 
-  lan =(this.id);
-  console.log("Language: "+lan)
-});
+// var lanOptions = $('.lan');  
+// lanOptions.on('click', function () { 
+//   lan =(this.id);
+//   console.log("Language: "+lan)
+// });
 
 //  Parameter Options COLOR 
 var colorOptions = $('.color');  
 colorOptions.on('click', function () { 
   color =(this.id);
   console.log("Color: "+color)
+  document.getElementById("colorDropdown").textContent=this.innerHTML;
 });
 
 //  Parameter Options CATEGORY
@@ -234,6 +239,7 @@ var categoryOptions = $('.category');
 categoryOptions.on('click', function () { 
   category =(this.id);
   console.log("category: "+category)
+  document.getElementById("genreDropdown").textContent=this.innerHTML;
 });
 
 // SafeSearch checkbox-

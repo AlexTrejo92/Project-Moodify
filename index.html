@@ -30,7 +30,6 @@
     </p>
     <div class="panel-block">
       <p class="control">
-
         <input class="input is-black" type="text" placeholder="Search" id="inputxim">  <!-- Added id="inputxim" -->
       </p>
       <button id="searchbtn">Search playlist!</button>
@@ -43,7 +42,7 @@
   <div class="box columns is-mobile has-text-centered" id="dropdowns">
 
       <!--START OF FIRST column with dropdown-->
-      <div class="dropdown has-text-left" id="dropdown1">  <!------- ELIMINATED class="column is-one-third"  -->
+      <!-- <div class="dropdown has-text-left" id="dropdown1">  
 
         <div class="dropdown-trigger">
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
@@ -63,7 +62,7 @@
           </div>
         </div>
       
-      </div>
+      </div> -->
       <!--END OF FIRST column with dropdown-->
 
       <!--START OF SECOND column with dropdown-->
@@ -72,7 +71,7 @@
         <div class="dropdown-trigger">
 
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span>Color</span>
+            <span id="colorDropdown">Color</span>
             <span class="icon is-small">
               <i class="fas fa-angle-down" aria-hidden="true"></i>
             </span>
@@ -103,7 +102,7 @@
 
         <div class="dropdown-trigger">
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span>Category</span>
+            <span id="genreDropdown">Genre</span>
 
             <span class="icon is-small">
               <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -115,16 +114,16 @@
         <div class="dropdown-menu" id="dropdown-menu3" role="menu">
 
           <div class="dropdown-content">
-    
-            <a class="category dropdown-item" id="fashion">Fashion</a>
-            <a class="category dropdown-item" id="nature">Nature</a>
-            <a class="category dropdown-item" id="science">Science</a>
-            <a class="category dropdown-item" id="feelings">Feelings</a>
-            <a class="category dropdown-item" id="people">People</a>
-            <a class="category dropdown-item" id="places">Places</a>
-            <a class="category dropdown-item" id="animals">Animals</a>
-            <a class="category dropdown-item" id="travel">Travel</a>
-            <a class="category dropdown-item" id="sports">Sports</a>
+            <!-- POP, ROCK, METAL, PUNK, ALTERNATIVE, DINNER, PARTY, SLEEP, FOCUS -->
+            <a class="category dropdown-item" id="pop">Pop</a>
+            <a class="category dropdown-item" id="rock">Rock</a>
+            <a class="category dropdown-item" id="metal">Metal</a>
+            <a class="category dropdown-item" id="punk">Punk</a>
+            <a class="category dropdown-item" id="alternative">Alternative</a>
+            <a class="category dropdown-item" id="dinner">Dinner</a>
+            <a class="category dropdown-item" id="party">Party</a>
+            <a class="category dropdown-item" id="sleep">Sleep</a>
+            <a class="category dropdown-item" id="focus">Focus</a>
           </div>
         </div>
 
