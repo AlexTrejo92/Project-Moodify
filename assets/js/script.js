@@ -39,7 +39,7 @@ fetch(tokenUrl, {
     console.error('Error:', error);
   });
   function artistSearch() {
-    const apiUrl = `https://api.spotify.com/v1/browse/categories/${genre}/playlists?limit=6`;
+    const apiUrl = `https://api.spotify.com/v1/browse/categories/${category}/playlists?limit=6`;
     fetch(apiUrl, {
       method: 'GET',
       headers: {'Authorization': `Bearer ${accessToken}`}
@@ -246,6 +246,14 @@ document.querySelector("#submit").addEventListener("click", function(event){
     event.preventDefault();
     inputs = document.querySelector("#inputxim").value;
     pixabayApi(inputs,lan,category,color,check);
+    var optionsCat = ['pop','rock','metal','punk','alternative','dinner','party','sleep', 'focus'];
+    console.log('category:' + category);
+    if (category === undefined ) {
+      var randomNumber = Math.floor(Math.random() * 8);
+      console.log('randomnumber:' + randomNumber);
+      category = optionsCat[randomNumber];
+    }
+    console.log(category);
     artistSearch();
     var unhideResults= document.getElementById("results");
     unhideResults.classList.remove("hidden");
