@@ -1,15 +1,15 @@
 #startPage {
     display: block; /*block*/
 
-
-    background-image: url(/assets/images/moodboard1.jpg);
+    /* background-image:(./assets/images/moodboard1.jpg); */
+    background: url(../../assets/images/moodboard2.jpg);
 
 }
 
 #startBox {
     margin: auto;
-    margin-top: 30vh;
-
+    margin-top: 15vh;
+    padding: 5%;
 }
 
 #startPageTitle {
@@ -100,6 +100,10 @@
 }
 
 /* style for moodboard */
+#extasmoodbrd{
+    display: flex;
+    justify-content: space-between;
+}
 .messages{
     text-align: left;
 }
