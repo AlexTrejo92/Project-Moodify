@@ -159,14 +159,6 @@ var playlistID = newData.playlists.items[0].id;
         })
  }
 
-//  Event listener that triggers with the Search Playlist Button
-  const button = document.getElementById('searchbtn');
-  button.addEventListener('click', (event) => {
-    artistSearch();
-    event.preventDefault();
-    // playlistSongSearch()
-  });
-
 // Code to change HTML when click the Check Playlist Info on the HTML button
 
 
@@ -254,7 +246,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
     event.preventDefault();
     inputs = document.querySelector("#inputxim").value;
     pixabayApi(inputs,lan,category,color,check);
-    
+    artistSearch();
     var unhideResults= document.getElementById("results");
     unhideResults.classList.remove("hidden");
   });
