@@ -180,6 +180,12 @@ menu3.addEventListener('click', e=>{
 
 
 // ------------------------------------------------------------------XIMENA 
+// //background image random: 
+// var randomNumber1 = Math.floor(Math.random() * 3);
+// var backgroundimgrando = "background: url(../../assets/images/moodboard"+randomNumber1+".jpg);";
+// console.log("backgroundimgrando: "+backgroundimgrando);
+// document.getElementById("startPage").setAttribute("style", backgroundimgrando);
+
 // init dropdowns:
 colorDrop();
 genreDrop();  
