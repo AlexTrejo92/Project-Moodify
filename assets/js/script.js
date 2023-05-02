@@ -180,6 +180,9 @@ menu3.addEventListener('click', e=>{
 
 
 // ------------------------------------------------------------------XIMENA 
+// init dropdowns:
+colorDrop();
+genreDrop();  
 
 // visibility of more images button 
 document.getElementById("moreImgs").setAttribute("style", "display: none");
@@ -197,20 +200,28 @@ var r;
 var storedImgs=[];
 
 //  Parameter Options COLOR 
-var colorOptions = $('.color');  
-colorOptions.on('click', function () { 
-  color =(this.id);
-  console.log("Color: "+color)
-  document.getElementById("colorDropdown").textContent=this.innerHTML;
-});
+function colorDrop(){
+  color="";
+  var colorOptions = $('.color');  
+  colorOptions.on('click', function () { 
+    color =(this.id);
+    console.log("Color: "+color)
+    document.getElementById("colorDropdown").textContent=this.innerHTML;
+  });
+}
+
 
 //  Parameter Options CATEGORY
-var categoryOptions = $('.category');  
-categoryOptions.on('click', function () { 
-  category =(this.id);
-  console.log("category: "+category)
-  document.getElementById("genreDropdown").textContent=this.innerHTML;
-});
+function genreDrop(){
+  category="";
+  var categoryOptions = $('.category');  
+  categoryOptions.on('click', function () { 
+    category =(this.id);
+    console.log("category: "+category)
+    document.getElementById("genreDropdown").textContent=this.innerHTML;
+  });
+}
+
 
 // SafeSearch checkbox-
 var checkboxx = document.querySelector(".safeSearch");
@@ -229,29 +240,29 @@ document.querySelector("#submit").addEventListener("click", function(event){
     event.preventDefault();
     inputs = document.querySelector("#inputxim").value;
     inputs2 = inputs.replace(/ /g, '+');
-    console.log("replaced: "+inputs2);
-    console.log("color: "+color);
+    console.log("Keywords: "+inputs2);
     pixabayApi(inputs2,category,color,check);
 
     var optionsCat = ['pop','rock','metal','punk','alternative','dinner','party','sleep', 'focus'];
-    console.log('category:' + category);
     if (category === undefined ) {
       var randomNumber = Math.floor(Math.random() * 8);
-      console.log('randomnumber:' + randomNumber);
       category = optionsCat[randomNumber];
     }
-    console.log(category);
+
     artistSearch();
 
     var unhideResults= document.getElementById("results");
     unhideResults.classList.remove("hidden");
 
     var errasemore = document.querySelectorAll(".more");
-    console.log("errasemore: ",errasemore);
-    for (n=0;n<errasemore.length;n++){
-      document.getElementById("pixabay2").removeChild(errasemore[n]);
+    if(errasemore.length != 0){
+      for (n=0;n<errasemore.length;n++){
+        document.getElementById("pixabay2").removeChild(errasemore[n]);
+      }
+      document.getElementById("pixabay2").classList.remove('gallery');
+      console.log("errasing extra imgs");
     }
-    document.getElementById("pixabay2").classList.remove('gallery');
+    
   });
   
   //PIXABAY
@@ -259,7 +270,6 @@ document.querySelector("#submit").addEventListener("click", function(event){
   //100 requests per minute.
   function pixabayApi(inputs2,category,color,check) {
     console.log("   pixabayApi()");
-    console.log("inputs: "+inputs2+" genre: "+category+" color: "+color);
     if (color === undefined){
       var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+inputs2+"&image_type=photo&editors_choice=true&safesearch="+check;
     } else {
@@ -287,7 +297,6 @@ document.querySelector("#submit").addEventListener("click", function(event){
   // showing images
   function displayImgs(myData,inputs,color){
     var datasize = myData.total;
-    console.log("datasize: "+datasize);
     if (datasize<10){
       r= datasize;
     } else {
@@ -300,9 +309,11 @@ document.querySelector("#submit").addEventListener("click", function(event){
     savemoodbrd(myData)
 
     //Clean parameters
-    color="";
-    category="";
-    console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
+    document.getElementById("colorDropdown").textContent="Color";
+    document.getElementById("genreDropdown").textContent="Genre";
+    colorDrop();
+    genreDrop();
+    console.log("inputs after clean: "+inputs+" color: "+color+" category: "+category);
 
     if (datasize>20){
       document.getElementById("moreImgs").setAttribute("style", "display: inline");
