@@ -17,6 +17,7 @@ var menu2 = document.getElementById("dropdown2");
 menu2.addEventListener('click', e=>{
     e.stopPropagation()
     menu2.classList.toggle('is-active')
+});
 
 
 // TODO: LocalStorage showOnboarding set (el boton de start)
