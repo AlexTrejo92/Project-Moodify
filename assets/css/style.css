@@ -47,7 +47,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: rgb(40, 65, 179);
+    background-color: rgb(91, 92, 95);
     width: 100%;
     padding: 5px;
     margin: 10px 0px;
@@ -193,7 +193,6 @@
     grid-row-end: 9;
 }
 /* -----------------STYLE FOR MOODBOARD  */
-
 
 .playlistSongsContainer {
     color:black;

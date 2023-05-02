@@ -193,13 +193,6 @@ var inputs;
 var inputs2;
 var r;
 
-//  Parameter Options LANGUAGE 
-// var lanOptions = $('.lan');  
-// lanOptions.on('click', function () { 
-//   lan =(this.id);
-//   console.log("Language: "+lan)
-// });
-
 //  Parameter Options COLOR 
 var colorOptions = $('.color');  
 colorOptions.on('click', function () { 
