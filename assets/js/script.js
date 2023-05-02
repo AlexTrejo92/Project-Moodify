@@ -180,6 +180,8 @@ menu3.addEventListener('click', e=>{
 
 
 // ------------------------------------------------------------------XIMENA 
+
+// visibility of more images button 
 document.getElementById("moreImgs").setAttribute("style", "display: none");
 
 
@@ -192,6 +194,7 @@ var check = true;
 var inputs;
 var inputs2;
 var r;
+var storedImgs=[];
 
 //  Parameter Options COLOR 
 var colorOptions = $('.color');  
@@ -274,12 +277,15 @@ document.querySelector("#submit").addEventListener("click", function(event){
         console.log('data from pixabayApi:');
         console.log(myData);
         document.querySelector(".messages").textContent="We found "+myData.total+" images."
-        displayImgs(myData)
+        displayImgs(myData,inputs2,color)
       });
       
   }
   
-  function displayImgs(myData){
+  
+
+  // showing images
+  function displayImgs(myData,inputs,color){
     var datasize = myData.total;
     console.log("datasize: "+datasize);
     if (datasize<10){
@@ -290,7 +296,10 @@ document.querySelector("#submit").addEventListener("click", function(event){
     for (n=0; n<r; n++){
       document.getElementById(n).setAttribute("src", myData.hits[n].largeImageURL);
     }
-    lan="";
+    // Functionality of save moodboard button:
+    savemoodbrd(myData)
+
+    //Clean parameters
     color="";
     category="";
     console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
@@ -300,6 +309,18 @@ document.querySelector("#submit").addEventListener("click", function(event){
       moreImgs(myData);
     }
   }
+
+  //  Save moodboard button 
+    function savemoodbrd(myData){
+      document.querySelector("#saveMoodbrd").addEventListener("click", function(){
+        for (n=0; n<r; n++){
+          storedImgs.push(myData.hits[n].largeImageURL);
+        }
+        console.log("storedImgs: "+storedImgs)
+        // local storage 
+        localStorage.setItem("Imgs from input: "+inputs+"+"+color, JSON.stringify(storedImgs));
+      });
+    }
 
   //  More images button 
   function moreImgs(myData){
