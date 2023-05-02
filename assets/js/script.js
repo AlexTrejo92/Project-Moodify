@@ -11,6 +11,14 @@ let accessToken;
 // this will be replace by the user search
 // let artist = 'arctic monkeys';
 
+
+// -------------------------------------FUNCTIONALITY OF DROPDOWNS
+var menu2 = document.getElementById("dropdown2");
+menu2.addEventListener('click', e=>{
+    e.stopPropagation()
+    menu2.classList.toggle('is-active')
+
+
 // TODO: LocalStorage showOnboarding set (el boton de start)
 // TODO: LOCAL STORAGE GET (siempre se hace)
 
@@ -24,6 +32,7 @@ fetch(tokenUrl, {
     'Content-Type': 'application/x-www-form-urlencoded'
   },
   body: 'grant_type=client_credentials'
+
 })
   .then(response => {
     if (response.ok) {
@@ -162,12 +171,8 @@ var playlistID = newData.playlists.items[0].id;
 // Code to change HTML when click the Check Playlist Info on the HTML button
 
 
-// -------------------------------------FUNCTIONALITY OF DROPDOWNS
-var menu2 = document.getElementById("dropdown2");
-menu2.addEventListener('click', e=>{
-    e.stopPropagation()
-    menu2.classList.toggle('is-active')
-})
+
+
 
 
 var menu3 = document.getElementById("dropdown3");
