@@ -1,3 +1,4 @@
+
 // Replace with your own client ID and client secret
 const clientId = 'b0a0b5ec72ab484ca47ab6994da9a3e0';
 const clientSecret = 'de7986ead2c54716b8962be43be72b59';
@@ -38,7 +39,7 @@ fetch(tokenUrl, {
     console.error('Error:', error);
   });
   function artistSearch() {
-    const apiUrl = `https://api.spotify.com/v1/browse/categories/${genre}/playlists?limit=6`;
+    const apiUrl = `https://api.spotify.com/v1/browse/categories/${category}/playlists?limit=6`;
     fetch(apiUrl, {
       method: 'GET',
       headers: {'Authorization': `Bearer ${accessToken}`}
@@ -158,17 +159,10 @@ var playlistID = newData.playlists.items[0].id;
         })
  }
 
-//  Event listener that triggers with the Search Playlist Button
-  const button = document.getElementById('searchbtn');
-  button.addEventListener('click', (event) => {
-    artistSearch();
-    event.preventDefault();
-    // playlistSongSearch()
-  });
-
 // Code to change HTML when click the Check Playlist Info on the HTML button
 
-// -------------------------------------FUNCTIONALITY OF DROPDOWNS 
+
+// -------------------------------------FUNCTIONALITY OF DROPDOWNS
 var menu2 = document.getElementById("dropdown2");
 menu2.addEventListener('click', e=>{
     e.stopPropagation()
@@ -234,7 +228,7 @@ colorOptions.on('click', function () {
   document.getElementById("colorDropdown").textContent=this.innerHTML;
 });
 
-//  Parameter Options GENRE
+//  Parameter Options CATEGORY
 var categoryOptions = $('.category');  
 categoryOptions.on('click', function () { 
   category =(this.id);
@@ -259,7 +253,15 @@ document.querySelector("#submit").addEventListener("click", function(event){
     event.preventDefault();
     inputs = document.querySelector("#inputxim").value;
     pixabayApi(inputs,lan,category,color,check);
-    
+    var optionsCat = ['pop','rock','metal','punk','alternative','dinner','party','sleep', 'focus'];
+    console.log('category:' + category);
+    if (category === undefined ) {
+      var randomNumber = Math.floor(Math.random() * 8);
+      console.log('randomnumber:' + randomNumber);
+      category = optionsCat[randomNumber];
+    }
+    console.log(category);
+    artistSearch();
     var unhideResults= document.getElementById("results");
     unhideResults.classList.remove("hidden");
   });

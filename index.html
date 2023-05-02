@@ -8,184 +8,25 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+  
     
-  <section class="section" id="header">
-  <nav class="level is-mobile">
-    <p class="level-item has-text-centered">
-      <a class="link has-text-success-dark" href="./assets/about-us/index.html">About us</a>
-    </p>
-    <p class="level-item has-text-centered">
-      <a class="title is-size-2">Moodify</a>
-    </p>
-    <p class="level-item has-text-centered">
-      <a class="link has-text-success-dark" href="./assets/faq/index.html">FAQ</a>
-    </p>
-  </nav>
-  </section>
-
-  <!-- user data input bar -->
-  <article class="panel is-black" id="searchbar">
-    <p class="panel-heading">
-      What are you looking for?
-    </p>
-    <div class="panel-block">
-      <p class="control">
-        <input class="input is-black" type="text" placeholder="Search" id="inputxim">  <!-- Added id="inputxim" -->
-      </p>
-      <button id="searchbtn">Search playlist!</button>
-
-      <!-- <input class="button has-text-centered" type="submit" value="Search" id="searchBtn"> -->     <!------- COMMENTED ISA'S BUTTON -->
-      <button class="button" id="submit">Button</button>
-    </div>
-  </article>
-
-  <div class="box columns is-mobile has-text-centered" id="dropdowns">
-
-      <!--START OF FIRST column with dropdown-->
-      <!-- <div class="dropdown has-text-left" id="dropdown1">  
-
-        <div class="dropdown-trigger">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span>Language</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-
-        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-          <div class="dropdown-content">
-            <a class="lan dropdown-item" id="en">English (Default)</a>
-            <hr class="dropdown-divider">
-            <a class="lan dropdown-item"class="lanOption" id="es">Español</a>
-            <a class="lan dropdown-item" id="fr">Français</a>
-          </div>
-        </div>
-      
-      </div> -->
-      <!--END OF FIRST column with dropdown-->
-
-      <!--START OF SECOND column with dropdown-->
-      <div class="dropdown has-text-left" id="dropdown2">   <!------- ELIMINATED class="column is-one-third"  -->
-
-        <div class="dropdown-trigger">
-
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span id="colorDropdown">Color</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
-
-        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-
-          <div class="dropdown-content">
-            <a class="color dropdown-item" id="grayscale">Grayscale</a>
-            <a class="color dropdown-item" id="red">Red</a>
-            <a class="color dropdown-item" id="orange">Orange</a>
-            <a class="color dropdown-item" id="yellow">Yellow</a>
-            <a class="color dropdown-item" id="green">Green</a>
-            <a class="color dropdown-item" id="blue">Blue</a>
-            <a class="color dropdown-item" id="pink">Pink</a>
-            <a class="color dropdown-item" id="brown">Brown</a>
-            <a class="color dropdown-item" id="white">White</a>
-            <a class="color dropdown-item" id="black">Black</a>
-          </div>
-        </div>
-      
-      </div>
-      <!--END OF SECOND column with dropdown-->
-
-      <!--START OF THIRD column with dropdown-->
-      <div class="dropdown has-text-left" id="dropdown3">  
-
-        <div class="dropdown-trigger">
-          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-            <span id="genreDropdown">Genre</span>
-
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
-        </div>
+    <section class="hero is-fullheight" id="startPage">
+      <div class="hero-body">
+        <div class="box" id="startBox">
+        <div class="container has-text-centered" id="startTextContainer">
+          <p class="title is-size-1" id="startPageTitle">
+            Welcome to Moodify
+          </p>
+          <p class="subtitle is-size-4" id="startPageTitle">
+            Ready to create your <strong id="startPageTitle">playlist</strong> and <strong id="startPageTitle">moodboard</strong>?</p>
+            <a class="button is-medium is-responsive is-rounded is-outlined is-black" id="startBtn" href="homepage.html">Start</a>
+            </div>
+            </div>
+            </div>
+    </section>
 
 
-        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-
-          <div class="dropdown-content">
-            <!-- POP, ROCK, METAL, PUNK, ALTERNATIVE, DINNER, PARTY, SLEEP, FOCUS -->
-            <a class="category dropdown-item" id="pop">Pop</a>
-            <a class="category dropdown-item" id="rock">Rock</a>
-            <a class="category dropdown-item" id="metal">Metal</a>
-            <a class="category dropdown-item" id="punk">Punk</a>
-            <a class="category dropdown-item" id="alternative">Alternative</a>
-            <a class="category dropdown-item" id="dinner">Dinner</a>
-            <a class="category dropdown-item" id="party">Party</a>
-            <a class="category dropdown-item" id="sleep">Sleep</a>
-            <a class="category dropdown-item" id="focus">Focus</a>
-          </div>
-        </div>
-
-      </div>
-      <!--END OF THIRD column with dropdown-->
-
-      <div>safesearch
-        <input type="checkbox" class="safeSearch" checked></div> 
-      </div>
-
-  </div>
-
-  <section class="section hidden" id="results">
-      <div class="columns is-mobile has-text-centered"> 
-
-
-          <div class="column is-two-fifths section">
-
-
-                  <div>
-                    <h2 class="subtitle is-size-4">
-                      Playlists
-                    </h2>
-                  </div>
-
-                  <div  id="mainPlaylistContainer"></div>
-
-         </div>
-
-
-
-          <div class="moodboard">
-            <h2 class="subtitle is-size-4" >Your moodboard</h2>
-            <p class="messages"></p>
-            <div class="gallery" id="pixabay">
-                <img class="gallery__img img1" id="0"/>
-                <img class="gallery__img img2" id="1"/>
-                <img class="gallery__img img3" id="2"/>
-                <img class="gallery__img img4" id="3"/>
-                <img class="gallery__img img5" id="4"/>
-                <img class="gallery__img img6" id="5"/>
-                <img class="gallery__img img7" id="6"/>
-                <img class="gallery__img img8" id="7"/>
-                <img class="gallery__img img9" id="8"/>
-                <img class="gallery__img img10" id="9"/>
-            </div>        
-          </div>
-          
-
-        <!--MOODBOARD AREA END-->
-    
-
-
-      </div>
-
-      <section class="section"  id="secondSection">
-        <div> </div>
-      </section>
-
-  </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="./assets/js/script.js"></script>
-  </body>
-
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    </body>
+  </html>
