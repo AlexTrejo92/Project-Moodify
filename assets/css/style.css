@@ -4,13 +4,13 @@
     display: block; /*block*/
 }
 
-#header {
-    display: none; /*inline*/
+/* #header {
+    display: none; 
 }
 
 #searchbar {
-    display: none; /*inline*/
-}
+    display: none; 
+} */
 
 /* ----------------------------- Im hidding & displaying the dropdowns and the results from JS with a dropdowns.style.visibility = "hidden";  */
 /* #results {
@@ -26,7 +26,7 @@
     margin: 1%;
 }
 
-.dropdownsinit{
+#dropdowns{
     display: flex;
     justify-content: space-between;
     margin: 0 4%;

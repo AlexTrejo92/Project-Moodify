@@ -17,20 +17,20 @@ menu3.addEventListener('click', e=>{
     menu3.classList.toggle('is-active')
 })
 
-var startBtn = document.getElementById("startBtn");
-startBtn.addEventListener('click', () => {
-    var startPage = document.getElementById("startPage");
-    startPage.style.display= 'none';
-    var header = document.getElementById("header");
-    header.style.display='inline';
-    var searchbar = document.getElementById("searchbar");
-    searchbar.style.display='inline';
-    var dropdowns = document.getElementById("dropdowns");
-    // dropdowns.style.display ='inline';
-    dropdowns.style.visibility = "visible";
-    dropdowns.setAttribute("class","dropdownsinit");
-    results.style.visibility = "visible";
-});
+// var startBtn = document.getElementById("startBtn");
+// startBtn.addEventListener('click', () => {
+//     var startPage = document.getElementById("startPage");
+//     startPage.style.display= 'none';
+//     var header = document.getElementById("header");
+//     header.style.display='inline';
+//     var searchbar = document.getElementById("searchbar");
+//     searchbar.style.display='inline';
+//     var dropdowns = document.getElementById("dropdowns");
+//     // dropdowns.style.display ='inline';
+//     dropdowns.style.visibility = "visible";
+//     dropdowns.setAttribute("class","dropdownsinit");
+//     results.style.visibility = "visible";
+// });
 
 // ---------------------------------------------------------COMENTED SEARCHBTN FUNCTIONALITY
 // var searchBtn = document.getElementById("searchBtn");
@@ -40,9 +40,9 @@ startBtn.addEventListener('click', () => {
 // });
 
 // ------------------------------------------------------------------XIMENA 
-dropdowns.style.visibility = "hidden";
-results = document.getElementById("results");
-results.style.visibility = "hidden";
+// dropdowns.style.visibility = "hidden";
+// results = document.getElementById("results");
+// results.style.visibility = "hidden";
 
 var pixabayKey = "35740114-335bc84d305f30b42ed6482fb";
 var queryURL1;
@@ -54,12 +54,12 @@ var inputs;
 var r;
 
 //  Parameter Options LANGUAGE 
-var lanOptions = $('.lan');  
-lanOptions.on('click', function () { 
-  lan =(this.id);
-  console.log("Language: "+lan)
-  document.getElementById("languageDropdown").textContent=this.innerHTML;
-});
+// var lanOptions = $('.lan');  
+// lanOptions.on('click', function () { 
+//   lan =(this.id);
+//   console.log("Language: "+lan)
+//   document.getElementById("languageDropdown").textContent=this.innerHTML;
+// });
 
 //  Parameter Options COLOR 
 var colorOptions = $('.color');  
@@ -69,7 +69,7 @@ colorOptions.on('click', function () {
   document.getElementById("colorDropdown").textContent=this.innerHTML;
 });
 
-//  Parameter Options CATEGORY
+//  Parameter Options GENRE 
 var categoryOptions = $('.category');  
 categoryOptions.on('click', function () { 
   category =(this.id);
@@ -102,7 +102,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
   function pixabayApi(inputs,lan,category,color,check) {
     console.log("   pixabayApi()");
     console.log("inputs: "+inputs+" "+lan+" "+category+" "+color);
-    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&lang="+lan+"&image_type=photo&editors_choice=true&category="+category+"&colors="+color+"&safesearch="+check;
+    var queryURL1 = "https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb&q="+ inputs+"&image_type=photo&editors_choice=true&category="+category+"&colors="+color+"&safesearch="+check;
     // https://pixabay.com/api/?key=35740114-335bc84d305f30b42ed6482fb   &q=yellow+flowers&image_type=photo
   
     fetch(queryURL1)
