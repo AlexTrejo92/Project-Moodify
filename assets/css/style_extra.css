@@ -1,0 +1,27 @@
+/* Styling about us and  */
+#returnnnn{
+    background-color: white;
+    /* width: 10%;*/
+    padding-bottom: 2%;
+    /* padding-top: 1%; */
+}
+
+
+#abtus{
+        margin: 10% 24%;
+}
+
+
+#Aboutusbody{
+    background: url(../../assets/images/moodboard0.jpg);
+    height: 100vh;
+    margin-top: 7%;
+}
+
+#faqbody{
+    background: url(../../assets/images/moodboard1.jpg);
+    height: 100vh;
+    margin-top: 7%;
+}
+
+
